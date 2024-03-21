@@ -1,1 +1,4 @@
 # SunPy
+
+## Planning Notes
+
