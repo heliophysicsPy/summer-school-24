@@ -1,0 +1,14 @@
+name: sunpy-pyspedas-summer-school
+channels:
+- conda-forge
+dependencies:
+- python < 3.12
+- pip
+- hdf5
+- pip:
+  - aiapy
+  - sunpy[all]
+  - sunpy-soar
+  - stixpy
+  - solarmach
+  - pyspedas
