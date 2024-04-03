@@ -1,0 +1,3 @@
+# Please add requirements for your tutorial below
+
+plasmapy >= 2024.2.0
