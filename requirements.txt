@@ -1,3 +1,5 @@
 # Please add requirements for your tutorial below
 
+astropy >= 1.0
 plasmapy >= 2024.2.0
+spacepy >=0.5.0
