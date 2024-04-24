@@ -3,7 +3,9 @@ from astropy.time import Time
 
 from hxform import xprint # print to console and astropy_time_demo.log
 
-time_string = '2009-06-17T12:00Z'
+time_string = '2000-01-01T00:00Z'
+time_string = '2000-03-20T12:06:40Z'
+#time_string = '2000-01-01T00:00:00Z'
 time_object = Time(time_string, precision=9)
 
 # Leap seconds - google smearing; using 60th second;

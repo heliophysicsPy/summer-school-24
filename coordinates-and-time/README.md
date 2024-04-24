@@ -18,6 +18,7 @@ Examples are given using native Python libraries and PyHC packages.
 * UTC, datetime, and pytz
 * SpacePy Ticktock
 * SunPy
+* See also comprehensive list at https://github.com/closeio/ciso8601
 
 ## Transforming
 
@@ -65,4 +66,3 @@ Give examples of doing transforms with at least two packages.
 2. Transforming a unit vector from GSE to GSM and plotting over the course of a year. Discussion of interpretation.
 
 3. Conversion from helioprojective (100 arcsec in x, 100 arcsec in y) to heliographic (lat long) (stonyhurst or carrington)
-
