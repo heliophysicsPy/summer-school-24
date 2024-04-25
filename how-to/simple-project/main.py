@@ -48,17 +48,23 @@ def trace(yz0, field_function, rtol=1e-3, s_eval=None, method='RK23'):
     field_mag = np.linalg.norm(field)
     return (1/field_mag)*field
 
-  if s_eval is None:
-    s_eval = np.linspace(0, 1, 10)
+  def cross_equator(s, yz):
+    return yz[1]
+  cross_equator.terminal = True
 
+  if s_eval is None:
+    s_eval = np.linspace(0, 2, 100)
+
+  # https://docs.scipy.org/doc/scipy/reference/generated/scipy.integrate.solve_ivp.html
   soln = solve_ivp(fun=dXds,
                   y0=yz0,
                   t_span=[s_eval[0], s_eval[-1]],
                   t_eval=s_eval,
+                  events=cross_equator,
                   rtol=rtol,
                   method=method)
 
-  return soln.y
+  return soln
 
 
 def const(yz):
@@ -74,32 +80,39 @@ def test():
 
 
 def compare():
-  ic = [1, 0] # Initial condition (y, z)
-  s_eval = np.linspace(0, 1, 10)
+  ic = [1, 1] # Initial condition (y, z)
+  s_eval = np.linspace(0, 3, 10)
 
   logger = logger_init()
 
-  logger.info(f'Initial position: y = {ic[0]} z = {ic[1]}')
-  logger.info(f'Length of traced field line: {s_eval[-1]}')
+  logger.info(f'Initial position: (x, y) = ({ic[0]}, {ic[1]})')
+
+  rtol = 1e-3
+  logger.info(f'Using rtol = {rtol}')
 
   logger.info('')
 
   logger.info(f'Start RK23')
-  soln23 = trace(ic, dipole_field, method='RK23')
+  soln23 = trace(ic, dipole_field, rtol=rtol, s_eval=s_eval, method='RK23')
   logger.info(f'Finish RK23')
 
   logger.info(f'Start RK45')
-  soln45 = trace(ic, dipole_field, method='RK45')
+  soln45 = trace(ic, dipole_field, rtol=rtol, s_eval=s_eval, method='RK45')
   logger.info(f'Finish RK45')
 
-  logger.info(f'RK23 Final position: y = {soln23[0,-1]:>.16f} z = {soln23[1,-1]:>.16f}')
-  logger.info(f'RK45 Final position: y = {soln45[0,-1]:>.16f} z = {soln45[1,-1]:>.16f}')
+  stop_yz23 = soln23.y_events[0][0]
+  stop_yz45 = soln45.y_events[0][0]
+
+  logger.info(f'RK23 Stop position: y = {stop_yz23[0]:.6f} z = {stop_yz23[1]:>9.2e}')
+  logger.info(f'RK45 Stop position: y = {stop_yz45[0]:.6f} z = {stop_yz45[1]:>9.2e}')
+
+  logger.info(f'y difference: {6371*abs(stop_yz23[0] - stop_yz45[0]):.0f} [km]')
 
   logger.info('')
   logger.info('const ≡ r/cos(latitude)^2')
-  logger.info(f'Initial const    = {const(ic)}')
-  logger.info(f'RK23 final const = {const(soln23[:,-1])}')
-  logger.info(f'RK45 final const = {const(soln45[:,-1])}')
+  logger.info(f'Initial const   = {const(ic):.8f}')
+  logger.info(f'RK23 stop const = {const(stop_yz23):.8f}')
+  logger.info(f'RK45 stop const = {const(stop_yz45):.8f}')
 
 
 def generate():
@@ -111,7 +124,7 @@ def generate():
   for y in start_ys:
     ic = [y, 0]
     soln45 = trace(ic, dipole_field, s_eval=s_eval, method='RK45')
-    lines[:,:,k] = soln45
+    lines[:,:,k] = soln45.y
     k = k + 1
   return lines
 
