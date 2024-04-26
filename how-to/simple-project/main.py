@@ -1,7 +1,7 @@
 import numpy as np
 from scipy.integrate import solve_ivp
 
-# Put options at the top. Once you have more than a few, it is time to refactor.
+# Put options at the top. Once you have more than a few, it is probably time to refactor.
 test = False
 compare_methods = True
 generate_lines = False
@@ -30,7 +30,8 @@ def dipole_field(yz):
 
 
 def dipole_field_test():
-  # Tests of dipole_field() based on hand calculations.
+  # Tests of dipole_field() based on hand calculations. Ideally one writes these
+  # tests before writing the function.
   # At (y, z) = (1, 0), the field should be (0, -1)
   assert np.all(dipole_field([1, 0]) - np.array([0, -1])) < 1e-15
   # At (y, z) = (-1, 0), the field should be (0, -1)
@@ -44,7 +45,12 @@ def dipole_field_test():
 def trace(yz0, field_function, rtol=1e-3, s_eval=None, method='RK23'):
 
   def dXds(s, yz):
-    field = field_function(yz)
+    # Return the RHS of a system of ODEs in the form dX/ds = F(s, X)
+    # where X = [y, z]
+    # In 2-D (y, z), the system of ODEs for a field line are
+    #   dy/ds = By/B
+    #   dz/ds = By/B
+    field = field_function(yz) # Returns Bx(y, z), By(y, z)
     field_mag = np.linalg.norm(field)
     return (1/field_mag)*field
 
@@ -138,3 +144,5 @@ if test == True:
 if generate_lines == True:
   lines = generate()
   np.save('data/lines.npy', lines)
+  # If there is any reason that we would want to inspect the numbers, we could
+  # save each field line in a separate CSV file.
