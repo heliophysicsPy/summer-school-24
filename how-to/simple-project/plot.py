@@ -8,6 +8,8 @@ import matplotlib.pyplot as plt
 plt.rcParams.update({'font.size': 14, 'font.family': 'Times New Roman'})
 
 lines = np.load('data/lines.npy')
+print('Read data/lines.npy')
+
 # Here I've colored everything black because I don't thing additional colors
 # will add more clarity.
 plt.plot(lines[0,:,:], lines[1,:,:],'k')
@@ -25,5 +27,7 @@ plt.grid()
 plt.savefig('figures/field_lines.png', dpi=300)
 plt.savefig('figures/field_lines.svg')
 #plt.savefig('figures/field_lines.pdf')
+print('Wrote figures/field_lines.{png,svg}')
+#print('Wrote figures/field_lines.{png,svg,pdf}')
 
 plt.show() # Needed if this script is executed from the command line.
