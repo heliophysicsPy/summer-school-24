@@ -4,7 +4,7 @@ The size and complexity of this project are at the threshold of where it makes s
 
 # Overview
 
-This repository contains code for the comparison of field line integration algorithms and the visualization of field lines.
+This repository contains code for experiments involving the comparison of field line tracing algorithms and the visualization of field lines. (Packages exist for field line tracing (see [Related](#Related)), but to simplify the experiment and interpretation of results, we do not use them.)
 
 The two primary functions in [`main.py`](main.py]) are `compare()` and `generate()`.
 
@@ -54,3 +54,15 @@ pip install scipy matplotlib
 python main.py # creates main.log; see switches at top of file for options
 python plot.py # creates figures/field_lines.{pdf,png,svg}
 ```
+
+# Related
+
+* https://streamtracer.readthedocs.io/en/stable/
+* https://psipy.readthedocs.io/en/stable/guide/tracing.html - Example of visualization using PyVista
+* https://spacepy.github.io/autosummary/spacepy.pybats.trace2d.html
+* https://spacepy.github.io/autosummary/spacepy.irbempy.find_footpoint.html
+* https://book.magneticearth.org/geomag-obs-models/03a_magnetic-field-line-tracing
+* https://github.com/CosmicStudioSoftware/OMMBV
+* https://pypi.org/project/FieldTracing/
+* https://github.com/mattkjames7/PyGeopack
+* [Effective-Tracing-of-Magnetic-Field-Lines.pdf](https://www.researchgate.net/profile/Francesco-Pizzo-3/publication/278537980_Effective_Tracing_of_Magnetic_Field_Lines/links/5631fe3608ae0530378d9247/Effective-Tracing-of-Magnetic-Field-Lines.pdf)
