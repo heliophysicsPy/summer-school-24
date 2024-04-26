@@ -3,8 +3,8 @@ from scipy.integrate import solve_ivp
 
 # Put options at the top. Once you have more than a few, it is probably time to refactor.
 test = False
-compare_methods = True
-generate_lines = False
+compare_methods = False
+generate_lines = True
 
 def logger_init():
   # Print to stdout and main.log
@@ -42,7 +42,7 @@ def dipole_field_test():
   assert np.all(dipole_field([-1, 0]) - np.array([0, 3])) < 1e-15
 
 
-def trace(yz0, field_function, rtol=1e-3, s_eval=None, method='RK23'):
+def trace(field_function, yz0, events=None, rtol=1e-3, s_eval=None, method='RK23'):
 
   def dXds(s, yz):
     # Return the RHS of a system of ODEs in the form dX/ds = F(s, X)
@@ -54,10 +54,6 @@ def trace(yz0, field_function, rtol=1e-3, s_eval=None, method='RK23'):
     field_mag = np.linalg.norm(field)
     return (1/field_mag)*field
 
-  def cross_equator(s, yz):
-    return yz[1]
-  cross_equator.terminal = True
-
   if s_eval is None:
     s_eval = np.linspace(0, 2, 100)
 
@@ -66,7 +62,7 @@ def trace(yz0, field_function, rtol=1e-3, s_eval=None, method='RK23'):
                   y0=yz0,
                   t_span=[s_eval[0], s_eval[-1]],
                   t_eval=s_eval,
-                  events=cross_equator,
+                  events=events,
                   rtol=rtol,
                   method=method)
 
@@ -86,10 +82,13 @@ def test():
 
 
 def compare():
+
+  def cross_equator(s, yz):
+    return yz[1]
+  cross_equator.terminal = True
+
   ic = [1, 1] # Initial condition (y, z)
   s_eval = np.linspace(0, 3, 10)
-
-  logger = logger_init()
 
   logger.info(f'Initial position: (x, y) = ({ic[0]}, {ic[1]})')
 
@@ -99,11 +98,11 @@ def compare():
   logger.info('')
 
   logger.info(f'Start RK23')
-  soln23 = trace(ic, dipole_field, rtol=rtol, s_eval=s_eval, method='RK23')
+  soln23 = trace(dipole_field, ic, events=cross_equator, rtol=rtol, s_eval=s_eval, method='RK23')
   logger.info(f'Finish RK23')
 
   logger.info(f'Start RK45')
-  soln45 = trace(ic, dipole_field, rtol=rtol, s_eval=s_eval, method='RK45')
+  soln45 = trace(dipole_field, ic, events=cross_equator, rtol=rtol, s_eval=s_eval, method='RK45')
   logger.info(f'Finish RK45')
 
   stop_yz23 = soln23.y_events[0][0]
@@ -122,18 +121,23 @@ def compare():
 
 
 def generate():
-  s_eval = np.linspace(0, 1, 10)
-  start_ys = np.arange(1, 16, 1)
+
+  s_eval = np.linspace(0, 2, 5)
+  n_lines = 5
+  start_thetas = np.linspace(np.pi/5, np.pi/2 - np.pi/5, n_lines)
+  starts = 1.01*np.array([np.cos(start_thetas), np.sin(start_thetas)]).T
+
   # Third dimension of lines is for each start y value
-  lines = np.full((2, len(s_eval), len(start_ys)), np.nan)
+  lines = np.full((2, len(s_eval), n_lines), np.nan)
   k = 0
-  for y in start_ys:
-    ic = [y, 0]
-    soln45 = trace(ic, dipole_field, s_eval=s_eval, method='RK45')
+  for ic in starts:
+    soln45 = trace(dipole_field, ic, s_eval=s_eval, method='RK45')
     lines[:,:,k] = soln45.y
+    logger.info(f'Line {k}\n{lines[:,:,k]}')
     k = k + 1
   return lines
 
+logger = logger_init()
 
 if compare_methods == True:
   compare()
@@ -143,6 +147,8 @@ if test == True:
 
 if generate_lines == True:
   lines = generate()
-  np.save('data/lines.npy', lines)
+  fname = 'data/lines.npy'
+  np.save(fname, lines)
+  logger.info(f'Wrote {fname}')
   # If there is any reason that we would want to inspect the numbers, we could
   # save each field line in a separate CSV file.

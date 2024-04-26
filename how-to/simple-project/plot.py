@@ -12,10 +12,12 @@ lines = np.load('data/lines.npy')
 # will add more clarity.
 plt.plot(lines[0,:,:], lines[1,:,:],'k')
 plt.plot(lines[0,0,:], lines[1,0,:],'k.')
+earth = plt.Circle((0, 0), 1, color='k')
+plt.gca().add_patch(earth)
 plt.xlabel('y or L')
 plt.ylabel('z', rotation=0) # If label is short, I rotate to make easier to read.
 plt.axis('equal') # So the field lines are not distorted by non-unity aspect ratio.
-plt.title('Field lines for dipole at (y, z) = (0, 0)')
+plt.title('Field lines for a dipole')
 plt.grid()
 
 # Save PNG for copy/paste into PPT. Save SVG for viewing in browser. Save PDF
