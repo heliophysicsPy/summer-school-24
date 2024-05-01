@@ -13,6 +13,8 @@ Examples are given using native Python libraries and PyHC packages.
 
 _9:05-9:55 Mountain Time_
 
+Most PyHC packages use, in some way, one or more of `datetime`, Pandas, or NumPy for time representations. Some packages extend the functionality `datetime` and NumPy, for example SpacePy's `TickTock` and AstroPy's `Time` (also used by SunPy).
+
 ## Parsing
 
 ### Known Time String Format
@@ -36,11 +38,11 @@ dt = datetime.datetime.strptime("2008-002T20:56:35.450686Z", "%Y-%jT%H:%M:%S.%fZ
 print(dt)
 ```
 
-For precisions higher than millisecond, [NumPy's datetime64](https://numpy.org/doc/stable/reference/arrays.datetime.html) can be used.
+For precisions higher than a millisecond, [NumPy's datetime64](https://numpy.org/doc/stable/reference/arrays.datetime.html) can be used.
 
 ### Unknown Time String Format
 
-[ISO 8601](https://en.wikipedia.org/wiki/ISO_8601) is a complex standard. If you have to parse a time string and don't know its format beyond "ISO 8601", you are likely to run into issues because not all packages fully implement the standard. For example, Pandas does not parse `2001-001T00Z`.
+[ISO 8601](https://en.wikipedia.org/wiki/ISO_8601) is a complex standard. If you have to parse a time string and don't know its format beyond "ISO 8601", you are likely to run into issues because not all packages fully implement the standard. For example, `pandas.to_datetime('2001-001T00Z')` fails.
 
 Parsers in the PyHC community:
 
@@ -48,19 +50,27 @@ Parsers in the PyHC community:
 * https://docs.sunpy.org/en/stable/how_to/parse_time.html
 * https://docs.astropy.org/en/stable/api/astropy.time.Time.html#astropy.time.Time
 
-And some code samples:
+Some code samples:
 
 * https://github.com/spacepy/spacepy/blob/main/spacepy/time.py#L1931
 * https://github.com/hapi-server/client-python/blob/master/hapiclient/hapitime.py#L166
 
 References
+
 * https://stackoverflow.com/questions/127803/how-do-i-parse-an-iso-8601-formatted-date-and-time
 * https://wiki.python.org/moin/WorkingWithTime
 * comprehensive list of Python packages that deal with ISO 8601 at https://github.com/closeio/ciso8601
 
 ## Generating
 
-A common task is to generate a list of timestamps that can be used, for plotting.
+A common task is to generate a list of timestamps. Here we give four examples
+
+1. `datetime()`
+2. `pandas.date_range()`
+3. `datetime64` values
+4. `spacepy.time.tickrange()`
+
+Another option that is not covered is [`sunpy.time.TimeRange`](https://docs.sunpy.org/en/stable/generated/api/sunpy.time.TimeRange.html).
 
 ## Transforming
 
@@ -78,6 +88,10 @@ A common task is to generate a list of timestamps that can be used, for plotting
 ### Parsing
 
 ### Generating
+
+1. Generate a list of `datetime` objects that start on `2024-01-01T00:00:00Z`, increment by one hour and end on a user-specified timestamp. You code should work for any user-specified end timestamp.
+
+2. Create a https://numpy.org/doc/stable/reference/arrays.datetime.html
 
 ### Transforming
 
