@@ -52,7 +52,7 @@ As is the case for the other Spacepy tutorials, we use a single directory contai
 
 ```python
 # Only use this if participating in the summer school!
-tutorial_data = '/shared/jtniehof/spacepy_tutorial/'  #All data for this tutorial, will be used throughout.
+tutorial_data = '/home/jovyan/scratch_space/spacepy_tutorial/'  #All data for this tutorial, will be used throughout.
 import os
 os.environ['SPACEPY'] = tutorial_data
 ```

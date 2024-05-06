@@ -35,7 +35,7 @@ import os
 # If no, make sure it's set to `False`
 is_pyhc = True
 if is_pyhc:
-    tutorial_data = '/shared/jtniehof/spacepy_tutorial'  # All data for Python in Heliophysics summer school
+    tutorial_data = '/home/jovyan/scratch_space/spacepy_tutorial'  # All data for Python in Heliophysics summer school
     os.environ['SPACEPY'] = tutorial_data  # Use .spacepy directory inside this directory
 else:
     tutorial_data = os.path.expanduser('~/spacepy_tutorial')  # Point this to wherever you want data to go.

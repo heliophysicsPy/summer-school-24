@@ -38,7 +38,7 @@ So we use a single directory containing all the data for this tutorial and also 
 
 ```python
 # Only use this if participating in the summer school!
-tutorial_data = '/shared/jtniehof/spacepy_tutorial'  # All data for this summer school, will be used throughout
+tutorial_data = '/home/jovyan/scratch_space/spacepy_tutorial'  # All data for this summer school, will be used throughout
 import os
 os.environ['SPACEPY'] = tutorial_data  # Use .spacepy directory inside this directory
 ```
