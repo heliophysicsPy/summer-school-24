@@ -19,7 +19,7 @@ jupyter:
 
 This tutorial was created for the [Python in Heliophysics Community (PyHC) 2022 Summer School](https://heliopython.org/summer-school). [Video of the original tutorial can be found here.](https://youtu.be/vHlOI6JAZ7A?t=19533) Commands relevant to the PyHC Summer School environment are commented out and in separate cells.
 
-Ensure that Spacepy is properly installed before running this Jupyter notebook.
+Ensure that Spacepy is properly installed before running this Jupyter notebook. This Markdown-formatted notebook uses Jupytext; if you are seeing Markdown source or a rendered document without "live" Jupyter notebook cells, open as a notebook (e.g. in JupyterLab, right-click, "Open With", "Notebook").
 
 The data that accompanies this tutorial has been archieved at Zenodo.com with the following DOI: 10.5281/zenodo.7693203. 
 [Users may download the data here.](https://doi.org/10.5281/zenodo.7693203)

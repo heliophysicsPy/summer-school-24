@@ -15,6 +15,8 @@ jupyter:
 # SpacePy Tutorial -- Cusp Energetic Particles
 This tutorial reproduces key figures from "Association of cusp energetic ions with geomagnetic storms and substorms" (Niehof et al, 2012; [doi:10.5194/angeo-30-1633-2012](https://doi.org/10.5194/angeo-30-1633-2012)).
 
+This Markdown-formatted notebook uses Jupytext; if you are seeing Markdown source or a rendered document without "live" Jupyter notebook cells, open as a notebook (e.g. in JupyterLab, right-click, "Open With", "Notebook").
+
 It illustrates several functions in SpacePy and the scientific Python ecosystem:
 
   - Import of IDL data [scipy.io](https://docs.scipy.org/doc/scipy/reference/generated/scipy.io.readsav.html#scipy.io.readsav)

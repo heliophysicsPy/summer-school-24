@@ -18,6 +18,8 @@ NASA's Magnetospheric Multiscale (MMS) mission includes a slightly unusual instr
 
 This tutorial introduces a few key tools and techniques in the SpacePy and scientific Python ecosystem through illustrative use on MMS data.
 
+This Markdown-formatted notebook uses Jupytext; if you are seeing Markdown source or a rendered document without "live" Jupyter notebook cells, open as a notebook (e.g. in JupyterLab, right-click, "Open With", "Notebook").
+
 *We note that MEC files with a major version number of 1 (i.e. v1.x.x) give the quaternions to rotate the frame.
 MEC files with a major version number of >=2 (i.e. 2.x.x) give the quaternion to rotate the vector.*
 
