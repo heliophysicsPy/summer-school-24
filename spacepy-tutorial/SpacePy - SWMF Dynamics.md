@@ -19,7 +19,7 @@ jupyter:
 
 This tutorial was created for the [Python in Heliophysics Community (PyHC) 2022 Summer School](https://heliopython.org/summer-school). [Video of the original tutorial can be found here.](https://youtu.be/vHlOI6JAZ7A?t=19533) Commands relevant to the PyHC Summer School environment are commented out and in separate cells.
 
-Ensure that Spacepy is properly installed before running this Jupyter notebook.
+Ensure that Spacepy is properly installed before running this Jupyter notebook. This Markdown-formatted notebook uses Jupytext; if you are seeing Markdown source or a rendered document without "live" Jupyter notebook cells, open as a notebook (e.g. in JupyterLab, right-click, "Open With", "Notebook").
 
 The data that accompanies this tutorial has been archieved at Zenodo.com with the following DOI: 10.5281/zenodo.7693203. 
 [Users may download the data here.](https://doi.org/10.5281/zenodo.7693203)
@@ -52,7 +52,7 @@ As is the case for the other Spacepy tutorials, we use a single directory contai
 
 ```python
 # Only use this if participating in the summer school!
-tutorial_data = '/shared/jtniehof/spacepy_tutorial/'  #All data for this tutorial, will be used throughout.
+tutorial_data = '/home/jovyan/scratch_space/spacepy_tutorial/'  #All data for this tutorial, will be used throughout.
 import os
 os.environ['SPACEPY'] = tutorial_data
 ```

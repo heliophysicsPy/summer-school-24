@@ -18,6 +18,8 @@ NASA's Magnetospheric Multiscale (MMS) mission includes a slightly unusual instr
 
 This tutorial introduces a few key tools and techniques in the SpacePy and scientific Python ecosystem through illustrative use on MMS data.
 
+This Markdown-formatted notebook uses Jupytext; if you are seeing Markdown source or a rendered document without "live" Jupyter notebook cells, open as a notebook (e.g. in JupyterLab, right-click, "Open With", "Notebook").
+
 *We note that MEC files with a major version number of 1 (i.e. v1.x.x) give the quaternions to rotate the frame.
 MEC files with a major version number of >=2 (i.e. 2.x.x) give the quaternion to rotate the vector.*
 
@@ -35,7 +37,7 @@ import os
 # If no, make sure it's set to `False`
 is_pyhc = True
 if is_pyhc:
-    tutorial_data = '/shared/jtniehof/spacepy_tutorial'  # All data for Python in Heliophysics summer school
+    tutorial_data = '/home/jovyan/scratch_space/spacepy_tutorial'  # All data for Python in Heliophysics summer school
     os.environ['SPACEPY'] = tutorial_data  # Use .spacepy directory inside this directory
 else:
     tutorial_data = os.path.expanduser('~/spacepy_tutorial')  # Point this to wherever you want data to go.
@@ -102,7 +104,7 @@ for key, value in mmsdata['mms1_mec_quat_eci_to_gse'].attrs.items():
 The [plot](https://spacepy.github.io/autosummary/spacepy.datamodel.ISTPContainer.html#spacepy.datamodel.ISTPContainer.plot) method of SpaceData allows for some quick and easy plots of the variables:
 
 ```python
-fig = mmsdata.plot(["mms1_mec_kp", "mms1_mec_v_gse"])
+fig = mmsdata.plot(["mms1_mec_dst", "mms1_mec_r_gse", "mms1_mec_v_gse"])
 ```
 
 ### So how do we use these quaternions?

@@ -17,6 +17,8 @@ jupyter:
 ### Background
 Earth's magnetic field provides protection from high energy charged particles originating outside the magnetosphere, such as solar energetic particles (SEPs) and galactic cosmic rays (GCRs). Properties of both the particle (mass, energy, charge) and the magnetic field (strength, topology)  will determine how deep into the magnetosphere a particle can penetrate.
 
+This Markdown-formatted notebook uses Jupytext; if you are seeing Markdown source or a rendered document without "live" Jupyter notebook cells, open as a notebook (e.g. in JupyterLab, right-click, "Open With", "Notebook").
+
 This example is largely inspired by ([Smart and Shea, 1993](https://adsabs.harvard.edu/full/1993ICRC....3..781S)), especially their Figure 2. It will also present the energetic charged particle data from the Global Positioning System constellation ([Morley et al., 2017](https://doi.org/10.1002/2017SW001604)).
 
 It illustrates several areas of functionality in SpacePy and the broader scientific Python ecosystem, as well as some approaches less widely used in academic programming, including:
@@ -44,7 +46,7 @@ is_pyhc = True
 import os
 import matplotlib
 if is_pyhc:
-    tutorial_data = '/shared/jtniehof/spacepy_tutorial'  # All data for Python in Heliophysics summer school
+    tutorial_data = '/home/jovyan/scratch_space/spacepy_tutorial'  # All data for Python in Heliophysics summer school
     os.environ['SPACEPY'] = tutorial_data  # Use .spacepy directory inside this directory
 else:
     tutorial_data = os.path.expanduser('~/spacepy_tutorial')  # Point this to wherever you want data to go.
@@ -594,7 +596,7 @@ for idx, mm in enumerate(moments):
 
 fig = plt.figure()
 ax = fig.add_subplot(111)
-ax.plot(epochs.UTC, cutoffs)
+ax.plot(epochs.UTC, cutoffs, ls='--')
 ax = plt.gca()
 ax2 = ax.twinx()
 ax2.grid(False)

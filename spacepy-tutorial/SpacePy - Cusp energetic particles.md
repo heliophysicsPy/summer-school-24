@@ -15,6 +15,8 @@ jupyter:
 # SpacePy Tutorial -- Cusp Energetic Particles
 This tutorial reproduces key figures from "Association of cusp energetic ions with geomagnetic storms and substorms" (Niehof et al, 2012; [doi:10.5194/angeo-30-1633-2012](https://doi.org/10.5194/angeo-30-1633-2012)).
 
+This Markdown-formatted notebook uses Jupytext; if you are seeing Markdown source or a rendered document without "live" Jupyter notebook cells, open as a notebook (e.g. in JupyterLab, right-click, "Open With", "Notebook").
+
 It illustrates several functions in SpacePy and the scientific Python ecosystem:
 
   - Import of IDL data [scipy.io](https://docs.scipy.org/doc/scipy/reference/generated/scipy.io.readsav.html#scipy.io.readsav)
@@ -38,7 +40,7 @@ So we use a single directory containing all the data for this tutorial and also 
 
 ```python
 # Only use this if participating in the summer school!
-tutorial_data = '/shared/jtniehof/spacepy_tutorial'  # All data for this summer school, will be used throughout
+tutorial_data = '/home/jovyan/scratch_space/spacepy_tutorial'  # All data for this summer school, will be used throughout
 import os
 os.environ['SPACEPY'] = tutorial_data  # Use .spacepy directory inside this directory
 ```
@@ -69,7 +71,7 @@ Download the [sample data for this notebook](https://doi.org/10.5281/zenodo.1090
 # Download high-res omni
 #hro_base = os.path.join(tutorial_data, 'hro')
 #spacepy.toolbox._crawl_yearly('https://spdf.gsfc.nasa.gov/pub/data/omni/omni_cdaweb/hro_5min/',
-                              r'omni_hro_5min_(199\d|200[012])[01]\d01_v01.cdf', hro_base, startyear=1996)
+#                              r'omni_hro_5min_(199\d|200[012])[01]\d01_v01.cdf', hro_base, startyear=1996)
 ```
 
 ## Background
