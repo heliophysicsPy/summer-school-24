@@ -71,7 +71,7 @@ Download the [sample data for this notebook](https://doi.org/10.5281/zenodo.1090
 # Download high-res omni
 #hro_base = os.path.join(tutorial_data, 'hro')
 #spacepy.toolbox._crawl_yearly('https://spdf.gsfc.nasa.gov/pub/data/omni/omni_cdaweb/hro_5min/',
-                              r'omni_hro_5min_(199\d|200[012])[01]\d01_v01.cdf', hro_base, startyear=1996)
+#                              r'omni_hro_5min_(199\d|200[012])[01]\d01_v01.cdf', hro_base, startyear=1996)
 ```
 
 ## Background
