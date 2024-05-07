@@ -104,7 +104,7 @@ for key, value in mmsdata['mms1_mec_quat_eci_to_gse'].attrs.items():
 The [plot](https://spacepy.github.io/autosummary/spacepy.datamodel.ISTPContainer.html#spacepy.datamodel.ISTPContainer.plot) method of SpaceData allows for some quick and easy plots of the variables:
 
 ```python
-fig = mmsdata.plot(["mms1_mec_kp", "mms1_mec_v_gse"])
+fig = mmsdata.plot(["mms1_mec_dst", "mms1_mec_r_gse", "mms1_mec_v_gse"])
 ```
 
 ### So how do we use these quaternions?
