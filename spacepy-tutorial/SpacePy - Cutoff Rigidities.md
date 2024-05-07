@@ -596,7 +596,7 @@ for idx, mm in enumerate(moments):
 
 fig = plt.figure()
 ax = fig.add_subplot(111)
-ax.plot(epochs.UTC, cutoffs)
+ax.plot(epochs.UTC, cutoffs, ls='--')
 ax = plt.gca()
 ax2 = ax.twinx()
 ax2.grid(False)
