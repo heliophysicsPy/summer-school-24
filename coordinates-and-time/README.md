@@ -5,11 +5,21 @@ _Wednesday, May 22nd, 9:05-9:55 and 10:05-10:55 Mountain Time_
 Target audience: Students with limited experience with
 
 * manipulation and transformation of time representations and
-* transforming data between Heliophysics coordinate systems
+* transforming data between Heliophysics coordinate frames
 
 Examples are given using native Python libraries and PyHC packages.
 
-# Time Transformations
+The objective of this session is for students to
+* learn about different ways to approach common Heliophysics time and coordinate system related problems and
+* try problems, ask questions, and hear answers and opinions more advanced PyHC developers
+
+# Outline
+
+1. Overview (5 min)
+2. Students work in groups on problems of their choosing. Students are welcome to create their own problems and attempt to answer them. Instructors will circulate and answer questions (40 min).
+3. Wrap-up - Instructor comments on common questions and asks selected groups to present their solution by screen sharing in Zoom. There will also be an opportunity to compare approaches that students took. (15 min)
+
+# Dealing with Time
 
 _9:05-9:55 Mountain Time_
 
@@ -40,13 +50,18 @@ print(dt)
 
 For precisions higher than a millisecond, [NumPy's datetime64](https://numpy.org/doc/stable/reference/arrays.datetime.html) can be used.
 
+**Problem**
+
+Write a program that uses the output of `datetime.datetime.strptime("2008-002T20:56:35.450686Z", "%Y-%jT%H:%M:%S.%fZ")` and prints `01/02/2008 at 20:56:35.450686`. (You will need to refer to the [`datetime`](https://docs.python.org/3/library/datetime.html) documentation.)
+
 ### Unknown Time String Format
+
+(This section is advanced and may be skipped.)
 
 [ISO 8601](https://en.wikipedia.org/wiki/ISO_8601) is a complex standard. If you have to parse a time string and don't know its format beyond "ISO 8601", you are likely to run into issues because not all packages fully implement the standard. For example, `pandas.to_datetime('2001-001T00Z')` fails.
 
 Parsers in the PyHC community:
 
-* https://spacepy.github.io/_modules/spacepy/time.html#Ticktock
 * https://docs.sunpy.org/en/stable/how_to/parse_time.html
 * https://docs.astropy.org/en/stable/api/astropy.time.Time.html#astropy.time.Time
 
@@ -61,18 +76,32 @@ References
 * https://wiki.python.org/moin/WorkingWithTime
 * comprehensive list of Python packages that deal with ISO 8601 at https://github.com/closeio/ciso8601
 
+**Problem**
+
+Suppose you are asked to write a function that takes an input of an ISO 8601 formatted time string and produce an output of a `datetime` object. How would you approach the problem? What tests would you use? How would you handle errors?
+
 ## Generating
 
-A common task is to generate a list of timestamps. Here we give four examples
+A common task is to generate a list of timestamps. The following program uses
 
-1. `datetime()`
-2. `pandas.date_range()`
-3. `datetime64` values
-4. `spacepy.time.tickrange()`
+* `datetime()`
+* `pandas.date_range()`
+* `datetime64` values
+* `spacepy.time.tickrange()`
 
-Another option that is not covered is [`sunpy.time.TimeRange`](https://docs.sunpy.org/en/stable/generated/api/sunpy.time.TimeRange.html).
+To generate a list of 10 days. 
+
+**Problem**
+
+Using any library, generate a list of `datetime` objects that start on `2024-01-01T00:00:00Z`, increment by one hour, and end on a user-specified timestamp. You code should work for any user-specified end timestamp.
 
 ## Transforming
+
+PyHC packages that implement time transformations include
+
+1. SpacePy
+2. [SunPy](https://docs.astropy.org/en/stable/api/astropy.time.Time.html#astropy.time.Time)
+https://github.com/heliophysicsPy/summer-school/blob/main/sunpy-tutorial/part-3-coordinates.ipynb
 
 ## Plotting
 
@@ -83,21 +112,7 @@ Another option that is not covered is [`sunpy.time.TimeRange`](https://docs.sunp
 * [pytplot](https://pypi.org/project/pytplot-mpl-temp/)
 * [geospacelab](https://github.com/JouleCai/geospacelab)
 
-## Problems
-
-### Parsing
-
-### Generating
-
-1. Generate a list of `datetime` objects that start on `2024-01-01T00:00:00Z`, increment by one hour and end on a user-specified timestamp. You code should work for any user-specified end timestamp.
-
-2. Create a https://numpy.org/doc/stable/reference/arrays.datetime.html
-
-### Transforming
-
-### Plotting
-
-# Space Transformations
+# Coordinate Frame Transformations
 
 _10:05-10:55 Mountain Time_
 
@@ -115,7 +130,7 @@ Three main approaches:
    * [NOAA Magnetic Field Calculators](https://www.ngdc.noaa.gov/geomag/calculators/magcalc.shtml)
    * [Kyoto Geographic <=> Geomagnetic (IGRF)](https://wdc.kugi.kyoto-u.ac.jp/igrf/gggm/)
 
-## Review of coordinate transforms
+## Review of coordinate frame transforms
 
 Give examples of doing transforms with at least two packages.
 
@@ -125,4 +140,4 @@ Give examples of doing transforms with at least two packages.
 
 2. Transforming a unit vector from GSE to GSM and plotting over the course of a year. Discussion of interpretation.
 
-3. Conversion from helioprojective (100 arcsec in x, 100 arcsec in y) to heliographic (lat long) (stonyhurst or carrington)
+3. Conversion from helioprojective (100 arcsec in x, 100 arcsec in y) to heliographic (lat long) (Stonyhurst or Carrington)

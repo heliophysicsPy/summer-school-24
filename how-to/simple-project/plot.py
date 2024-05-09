@@ -28,6 +28,6 @@ plt.savefig('figures/field_lines.png', dpi=300)
 plt.savefig('figures/field_lines.svg')
 #plt.savefig('figures/field_lines.pdf')
 print('Wrote figures/field_lines.{png,svg}')
-#print('Wrote figures/field_lines.{png,svg,pdf}')
+#print('Wrote figures/field_lines.{png,svg}')
 
 plt.show() # Needed if this script is executed from the command line.

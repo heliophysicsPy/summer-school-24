@@ -1,14 +1,16 @@
+import os
+import logging
+
+
 from astropy.time import Time
 # https://docs.astropy.org/en/stable/time/index.html
 
 def logger_init():
-  # Print to stdout and main.log
-  import os
-  import logging
-  # TODO: Get base filename from __file__ in case this script name changes.
-  if os.path.exists("main.log"):
-    os.remove("main.log")
-  handlers = [logging.FileHandler("main.log"), logging.StreamHandler()]
+  # Print to stdout and FILENAME.log
+  fname = os.path.splitext(__file__)[0] + ".log"
+  if os.path.exists(fname):
+    os.remove(fname)
+  handlers = [logging.FileHandler(fname), logging.StreamHandler()]
   format = '%(message)s'
   logging.basicConfig(level=logging.INFO, handlers=handlers, format=format)
   return logging.getLogger(__name__).info
@@ -48,3 +50,5 @@ for FORMAT in [*list(Time.FORMATS.keys()),'jd1','jd2']:
     val = getattr(time_object, FORMAT)
 
     log(f"{FORMAT:13} {SCALE:5} {val}") # https://docs.astropy.org/en/stable/time/#id6
+
+logging.shutdown() # Needed for notebooks.

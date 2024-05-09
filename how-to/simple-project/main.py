@@ -24,6 +24,9 @@ def dipole_field(yz):
   r = np.linalg.norm(yz)
   # Cartesian form of dimensionless magnetic (or electric) field in y-z plane
   # due to ideal dipole at origin with moment pointing in z direction.
+  # See Walt, 1994, Introduction to Geomagnetically Trapped Radiation, pg 30
+  # (PDF in refs directory of this repository) for spherical form and
+  # https://ccmc.gsfc.nasa.gov/RoR_WWW/presentations/Dipole.pdf
   By = 3*y*z/r**5
   Bz = (3*z**2 - r**2)/r**5
   return np.array([By, Bz])
@@ -71,8 +74,9 @@ def trace(field_function, yz0, events=None, rtol=1e-3, s_eval=None, method='RK23
 
 def const(yz):
   # See Walt, 1994, Introduction to Geomagnetically Trapped Radiation, pg 30
-  # For dipole considered, an analytic result is that field lines follow a
-  # path for which r/cos(latitude)^2 a constant.
+  # (PDF in refs directory of this repository). For dipole considered, an 
+  # analytic result is that field lines follow a path for which 
+  # r/cos(latitude)^2 a constant.
   latitude = np.arctan2(yz[1], yz[0])
   return np.linalg.norm(yz)/np.cos(latitude)**2
 
@@ -136,6 +140,7 @@ def generate():
     logger.info(f'Line {k}\n{lines[:,:,k]}')
     k = k + 1
   return lines
+
 
 logger = logger_init()
 

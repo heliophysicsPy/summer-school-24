@@ -28,6 +28,3 @@ for time in times:
   except:
     print(f'ciso8601.parse_datetime  failed')
     dt = None
-
-
-import datetime 
