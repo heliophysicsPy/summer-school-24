@@ -7,8 +7,9 @@ dependencies:
 - hdf5
 - pip:
   - aiapy
+  - solarmach
+  - sunkit-image
   - sunpy[all]
   - sunpy-soar
   - stixpy
-  - solarmach
   - pyspedas
