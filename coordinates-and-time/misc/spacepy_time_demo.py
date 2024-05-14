@@ -1,4 +1,5 @@
-import spacepy.time 
+import spacepy.time
+
 time_string = '2000-03-20T12:06:40Z'
 time =  spacepy.time.Ticktock(time_string, 'ISO')
 # SpacePy refers to the following as "systems". AstroPy has some as "formats" and
