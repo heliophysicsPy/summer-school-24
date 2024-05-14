@@ -5,9 +5,9 @@
 **Machine learning** (ML) is generally recognized as a subset of **Artificial Intelligence** (AI). There are many ways that AI and ML are defined and represented:
 
 ![What are ML and AI Figure, source is "https://twitter.com/fpmarconi/status/794208040207740928"
-](/images/intro/aivsml.png)
+](/aiml-tutorial/images/intro/aivsml.png)
 <!--
-<img src="/images/intro/aivsml.png" width="300" alt="What are ML and AI Figure, source is https://twitter.com/fpmarconi/status/794208040207740928">
+<img src="/aiml-tutorial/images/intro/aivsml.png" width="300" alt="What are ML and AI Figure, source is https://twitter.com/fpmarconi/status/794208040207740928">
 -->
 
  Most people know machine learning can be useful for automating and streamlining tasks that can be arduous for humans. Machine learning is much more than that - a skilled practitioner can allow the data to "speak for itself," find higher-level relationships, and new representations of your dataset that bring valuable information to light.
@@ -26,9 +26,9 @@ There have been major changes to the landscape:
 Most practitioners talk about machine learning and AI under the broader umbrella of "**data science**."  Data science is the interdisciplinary combination of several skill sets:  statistics, subject matter knowledge, computation/programming, and visualization/data representation. 
 
 ![What is Data Science Figure, Credited to Drew Conway,  Creative Commons licensed as Attribution-NonCommercial.
-](/images/intro/Data_Science_Diagram.png)
+](/aiml-tutorial/images/intro/Data_Science_Diagram.png)
 <!--
-<img src="/images/intro/Data_Science_Diagram.png" width="300" alt="What is Data Science Figure, Credited to Drew Conway,  Creative Commons licensed as Attribution-NonCommercial."/>>
+<img src="/aiml-tutorial/images/intro/Data_Science_Diagram.png" width="300" alt="What is Data Science Figure, Credited to Drew Conway,  Creative Commons licensed as Attribution-NonCommercial."/>>
 -->
 
 ### What are the types of ML?
@@ -37,7 +37,7 @@ Machine Learning is usually expressed in terms of two different categories:  **s
 
 **Supervised learning** is useful when you know what you want, and you just need to provide examples to the model so it can do it for you.  The two broad types of supervised learning.  One is **classification**, where you have pre-defined categories, and the model is supposed to take inputs and assign them to a category.  The other is **regression**, where the model is supposed to find a relationship between your input variables.  A least-squares-fit is a common type of regression, relating the independent variable (x) to the dependent variable (y). This x-y relationship is reflected in most ML models even if they aren't regressive, in that the input variable(s) is typically denoted as 'x' and the model's target output is denoted as 'y'.
 
-![Supervised vs. Unsupervised ML Figure](/images/intro/unsupervised2.png)
+![Supervised vs. Unsupervised ML Figure](/aiml-tutorial/images/intro/unsupervised2.png)
 
 **Unsupervised learning** looks for relationships or organizational structure in a dataset.  The primary difference between supervised and unsupervised learning is that the model is not given examples of a "correct" answer to train it.  Instead, the model uses the performance measure, or "cost function," to find the best way to reorganize the data.  
 
@@ -47,7 +47,7 @@ A common type of unsupervised learning is **clustering**, where the model looks 
 
 The following diagram represents the types of machine learning for commercial industry. Let's consider what this figure would look like for Heliophysics.  Where does flare and geomagnetic storm forecasting fit in? Feature identification? Classifying solar wind structure?  
 
-![General Types of Machine Learning Figure, Source is Biwan Shrestha, LinkedIn Learning https://www.linkedin.com/pulse/types-machine-learning-techy-explorer/](/images/intro/applicationsofml.png)
+![General Types of Machine Learning Figure, Source is Biwan Shrestha, LinkedIn Learning https://www.linkedin.com/pulse/types-machine-learning-techy-explorer/](/aiml-tutorial/images/intro/applicationsofml.png)
 
 
 
