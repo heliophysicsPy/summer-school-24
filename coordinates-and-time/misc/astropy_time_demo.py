@@ -1,21 +1,26 @@
+import os
+import logging
+
+
 from astropy.time import Time
 # https://docs.astropy.org/en/stable/time/index.html
 
-from hxform import xprint # print to console and astropy_time_demo.log
+def logger_init():
+  # Print to stdout and FILENAME.log
+  fname = os.path.splitext(__file__)[0] + ".log"
+  if os.path.exists(fname):
+    os.remove(fname)
+  handlers = [logging.FileHandler(fname), logging.StreamHandler()]
+  format = '%(message)s'
+  logging.basicConfig(level=logging.INFO, handlers=handlers, format=format)
+  return logging.getLogger(__name__).info
 
-time_string = '2009-06-17T12:00Z'
+log = logger_init()
+
+time_string = '2000-01-01T00:00Z'
+time_string = '2000-03-20T12:06:40Z'
+#time_string = '2000-01-01T00:00:00Z'
 time_object = Time(time_string, precision=9)
-
-# Leap seconds - google smearing; using 60th second;
-# can be important for some applications; differences in length of second
-# Look into assumptions made in different libraries
-
-# Ask students to ask what impact handling of leap seconds has on their results
-# Also about other assumptions that go into scales.
-# Rebecca edge case in SpacePy
-# Look into SpacePy issue tracker for ideas
-# https://github.com/spacepy/spacepy/issues/673
-# Find Angel or Gary's post to SpacePy issue tracker
 
 if False:
   # Basic usage
@@ -24,10 +29,10 @@ if False:
   print(val)
 
 # Print all formats and scales for t
-xprint(f"\nTime: {time_object}\n")
+log(f"\nTime: {time_object}\n")
 maxlen = max([len(f) for f in list(Time.FORMATS.keys())])
-xprint(f"Format        Scale Value")
-xprint(f"------------------------------------------")
+log(f"Format        Scale Value")
+log(f"------------------------------------------")
 for FORMAT in [*list(Time.FORMATS.keys()),'jd1','jd2']:
   for SCALE in Time.SCALES:
     if SCALE == 'local': continue
@@ -44,4 +49,6 @@ for FORMAT in [*list(Time.FORMATS.keys()),'jd1','jd2']:
     # https://docs.astropy.org/en/stable/time/#time-format
     val = getattr(time_object, FORMAT)
 
-    xprint(f"{FORMAT:13} {SCALE:5} {val}") # https://docs.astropy.org/en/stable/time/#id6
+    log(f"{FORMAT:13} {SCALE:5} {val}") # https://docs.astropy.org/en/stable/time/#id6
+
+logging.shutdown() # Needed for notebooks.
