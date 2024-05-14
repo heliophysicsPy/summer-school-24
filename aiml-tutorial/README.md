@@ -17,15 +17,14 @@ These materials use numpy, matplotlib (pyplot), pandas
 | Session    | Lecture Topic                         |  Link    |  Timing    |
 |------------|------------------------------------------------|------|---------|
 | Session 1  | **Introduction**                               |      |  |
-| Session 1A | **What is Machine Learning?**                  |  <a href="/CourseMaterials/Introduction.md">Link</a>    | ?? min. |
-| Session 1B | **How does Machine Learning work?**                 |  <a href="/CourseMaterials/models.md">Link</a>    |  ?? min. |
+| Session 1A | **What is Machine Learning?**                  |  <a href="/CourseMaterials/Introduction.md">Link</a>    | 15 min. |
+| Session 1B | **How does Machine Learning work?**                 |  <a href="/CourseMaterials/models.md">Link</a>    |  15 min. |
 | Session 2  | **Examples: ML Models**                           |      |         |
-| Session 2A | **Clustering** | <a href="/CourseMaterials/clustering_simple.ipynb">Link</a>   |   ?? min. |
-| Session 2B | **Decision Boundary**                                           | <a href="/CourseMaterials/Boundary_simple.ipynb">Link</a>   |   ?? min. |
-| Session 2C | **Decision Boundary using TensorFlow**                                              | <a href="/CourseMaterials/Boundary_TensorFlow.ipynb">Link</a>   |   ?? min. |
-| Session 2D | **Classifier**                                              | <a href="/CourseMaterials/Classifier_example.ipynb">Link</a>   |   ?? min. |
-| Session 2E | **Regression**                                              | In Development   |   ?? min. |
-| Session 3  | **Data Science Workflow**                           |  In Development  |   ?? min. |
+| Session 2A | **Clustering** | <a href="/CourseMaterials/clustering_simple.ipynb">Link</a>   |   20 min. |
+| Session 2B | **Decision Boundary**                                           | <a href="/CourseMaterials/Boundary_simple.ipynb">Link</a>   |   20 min. |
+| Session 2C | **Decision Boundary using TensorFlow**                                              | <a href="/CourseMaterials/Boundary_TensorFlow.ipynb">Link</a>   |   20 min. |
+| Session 2D | **Classifier**                                              | <a href="/CourseMaterials/Classifier_example.ipynb">Link</a>   |   20 min. |
+| Session 3  | **Data Science Workflow**                           |  <a href="/CourseMaterials/Data_Science_Lifecycle.md">Link</a>  |   15 min. |
 
 ##  Use and Dependencies
 These materials were developed for the summer school students, but are intended to function as stand-alone lessons freely to be used by anyone.  
