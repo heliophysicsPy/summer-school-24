@@ -5,7 +5,7 @@ import matplotlib.pyplot as plt
 # Try to match font used in document in which plot will be embedded.
 # If you plan on presenting on screen and including in a paper, you may want
 # to have two versions of the plot with different font sizes.
-plt.rcParams.update({'font.size': 14, 'font.family': 'Times New Roman'})
+plt.rcParams.update({'font.size': 14, 'font.family': 'serif'})
 
 lines = np.load('data/lines.npy')
 print('Read data/lines.npy')
