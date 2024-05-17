@@ -1,0 +1,69 @@
+{
+    "HAPI": "3.1",
+    "status": {
+        "code": 1200,
+        "message": "ok"
+    },
+    "parameters": [
+        {
+            "name": "Time",
+            "type": "isotime",
+            "length": 17,
+            "units": "UTC",
+            "fill": null,
+            "description": "The UTC date and time for the data from Hermanus, South Africa (HER)",
+            "label": "Date/time"
+        },
+        {
+            "name": "Field_Vector",
+            "type": "double",
+            "size": [
+                3
+            ],
+            "units": [
+                "nT",
+                "minutes",
+                "nT"
+            ],
+            "coordinateSystemName": "Cylindrical",
+            "vectorComponents": [
+                "rho",
+                "longitude",
+                "z"
+            ],
+            "fill": "99999.0",
+            "description": "The vector value of the magnetic field at Hermanus, South Africa (HER)",
+            "label": [
+                "H",
+                "D",
+                "Z"
+            ]
+        },
+        {
+            "name": "Field_Magnitude",
+            "type": "double",
+            "units": "nT",
+            "vectorComponents": "r",
+            "fill": "99999.0",
+            "description": "The scalar value of the magnetic field from an independent instrument at Hermanus, South Africa (HER)",
+            "label": "F"
+        }
+    ],
+    "startDate": "2001-01-01T00:00:00Z",
+    "stopDate": "2024-05-16T23:59:00Z",
+    "timeStampLocation": "begin",
+    "cadence": "PT1M",
+    "maxRequestDuration": "P366D",
+    "description": "Adjusted minute data in HDZF orientation from Hermanus, South Africa (HER)",
+    "coordinateSystemSchema": "spase2.4.1",
+    "resourceURL": "https://intermagnet.org",
+    "creationDate": "2001-01-01T00:00:00Z",
+    "citation": "https://intermagnet.org/data_conditions.html",
+    "modificationDate": "2024-05-17T07:18:08Z",
+    "contact": "e_ginman@bgs.ac.uk",
+    "x_latitude": -34.400000000000006,
+    "x_longitude": 19.2,
+    "x_elevation": 26.0,
+    "x_server": "https://imag-data.bgs.ac.uk/GIN_V1/hapi",
+    "x_dataset": "her/adjusted/PT1M/hdzf"
+}
