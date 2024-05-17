@@ -1,71 +1,71 @@
 {
     "HAPI": "2.0",
-    "status": {
-        "code": 1200,
-        "message": "OK"
-    },
+    "resourceURL": "https://cdaweb.gsfc.nasa.gov/misc/NotesA.html#AC_K0_EPM",
+    "contact": "R. Gold @ JHU Applied Physics Laboratory",
     "parameters": [
         {
             "name": "Time",
-            "type": "isotime",
-            "units": "UTC",
             "length": 24,
+            "units": "UTC",
+            "type": "isotime",
             "fill": null
         },
         {
             "name": "H_lo",
-            "type": "double",
+            "description": "Proton Flux (0.48-0.97 MeV)",
             "units": "1/(cm2 s ster MeV)",
-            "fill": "-1.0E31",
-            "description": "Proton Flux (0.48-0.97 MeV)"
+            "type": "double",
+            "fill": "-1.0E31"
         },
         {
             "name": "Ion_very_lo",
-            "type": "double",
+            "description": "Ion Flux (47-65 keV)",
             "units": "1/(cm2 s ster MeV)",
-            "fill": "-1.0E31",
-            "description": "Ion Flux (47-65 keV)"
+            "type": "double",
+            "fill": "-1.0E31"
         },
         {
             "name": "Ion_lo",
-            "type": "double",
+            "description": "Ion Flux (112-187 keV)",
             "units": "1/(cm2 s ster MeV)",
-            "fill": "-1.0E31",
-            "description": "Ion Flux (112-187 keV)"
+            "type": "double",
+            "fill": "-1.0E31"
         },
         {
             "name": "Ion_mid",
-            "type": "double",
+            "description": "Ion Flux (310-580 keV)",
             "units": "1/(cm2 s ster MeV)",
-            "fill": "-1.0E31",
-            "description": "Ion Flux (310-580 keV)"
+            "type": "double",
+            "fill": "-1.0E31"
         },
         {
             "name": "Ion_hi",
-            "type": "double",
+            "description": "Ion Flux (1060-1910 keV)",
             "units": "1/(cm2 s ster MeV)",
-            "fill": "-1.0E31",
-            "description": "Ion Flux (1060-1910 keV)"
+            "type": "double",
+            "fill": "-1.0E31"
         },
         {
             "name": "Electron_lo",
-            "type": "double",
+            "description": "Electron Flux (38-53 keV)",
             "units": "1/(cm2 s ster MeV)",
-            "fill": "-1.0E31",
-            "description": "Electron Flux (38-53 keV)"
+            "type": "double",
+            "fill": "-1.0E31"
         },
         {
             "name": "Electron_hi",
-            "type": "double",
+            "description": "Electron Flux (175-315 keV)",
             "units": "1/(cm2 s ster MeV)",
-            "fill": "-1.0E31",
-            "description": "Electron Flux (175-315 keV)"
+            "type": "double",
+            "fill": "-1.0E31"
         }
     ],
     "startDate": "2017-07-01T00:00:00Z",
-    "stopDate": "2022-05-28T23:55:00Z",
-    "resourceURL": "https://cdaweb.gsfc.nasa.gov/misc/NotesA.html#AC_K0_EPM",
-    "contact": "R. Gold @ JHU Applied Physics Laboratory",
+    "stopDate": "2024-05-11T23:55:00Z",
+    "status": {
+        "code": 1200,
+        "message": "OK"
+    },
     "x_server": "https://cdaweb.gsfc.nasa.gov/hapi",
     "x_dataset": "AC_K0_EPM"
 }

@@ -1,400 +1,400 @@
 {
     "HAPI": "2.0",
-    "status": {
-        "code": 1200,
-        "message": "OK"
-    },
+    "resourceURL": "https://cdaweb.gsfc.nasa.gov/misc/NotesO.html#OMNI2_H0_MRG1HR",
+    "contact": "J.H. King, N. Papitashvili @ ADNET, NASA GSFC",
     "parameters": [
         {
             "name": "Time",
-            "type": "isotime",
-            "units": "UTC",
             "length": 24,
+            "units": "UTC",
+            "type": "isotime",
             "fill": null
         },
         {
             "name": "Rot1800",
-            "type": "integer",
+            "description": "Bartels Rotation Number",
             "units": "  ",
-            "fill": "9999",
-            "description": "Bartels Rotation Number"
+            "type": "integer",
+            "fill": "9999"
         },
         {
             "name": "IMF1800",
-            "type": "integer",
+            "description": "OMNI ID code for the source spacecraft for time-shifted IMF values (see OMNI documentation link for codes)",
             "units": null,
-            "fill": "99",
-            "description": "OMNI ID code for the source spacecraft for time-shifted IMF values (see OMNI documentation link for codes)"
+            "type": "integer",
+            "fill": "99"
         },
         {
             "name": "PLS1800",
-            "type": "integer",
+            "description": "OMNI ID code for the source spacecraft for time-shifted IP plasma values (see OMNI documentation link for codes)",
             "units": null,
-            "fill": "99",
-            "description": "OMNI ID code for the source spacecraft for time-shifted IP plasma values (see OMNI documentation link for codes)"
+            "type": "integer",
+            "fill": "99"
         },
         {
             "name": "IMF_PTS1800",
-            "type": "integer",
+            "description": "# fine time scale IMF points",
             "units": null,
-            "fill": "999",
-            "description": "# fine time scale IMF points"
+            "type": "integer",
+            "fill": "999"
         },
         {
             "name": "PLS_PTS1800",
-            "type": "integer",
+            "description": "# fine time scale plasma points",
             "units": null,
-            "fill": "999",
-            "description": "# fine time scale plasma points"
+            "type": "integer",
+            "fill": "999"
         },
         {
             "name": "ABS_B1800",
-            "type": "double",
+            "description": "1AU IP Average B Field Magnitude, nT, (last currently-available OMNI B-field data Mar 27, 2024)",
             "units": "nT",
-            "fill": "999.9",
-            "description": "1AU IP Average B Field Magnitude, nT, (last currently-available OMNI B-field data Apr 28, 2022)"
+            "type": "double",
+            "fill": "999.9"
         },
         {
             "name": "F1800",
-            "type": "double",
+            "description": "1AU IP Magnitude of average field vector (nT)",
             "units": "nT",
-            "fill": "999.9",
-            "description": "1AU IP Magnitude of average field vector (nT)"
+            "type": "double",
+            "fill": "999.9"
         },
         {
             "name": "THETA_AV1800",
-            "type": "double",
+            "description": "1AU IP Latitude/Theta of average B vector (deg)",
             "units": "Deg",
-            "fill": "999.9",
-            "description": "1AU IP Latitude/Theta of average B vector (deg)"
+            "type": "double",
+            "fill": "999.9"
         },
         {
             "name": "PHI_AV1800",
-            "type": "double",
+            "description": "1AU IP Longitude/Phi of average B vector (deg)",
             "units": "Deg",
-            "fill": "999.9",
-            "description": "1AU IP Longitude/Phi of average B vector (deg)"
+            "type": "double",
+            "fill": "999.9"
         },
         {
             "name": "BX_GSE1800",
-            "type": "double",
+            "description": "1AU IP Bx (nT), GSE",
             "units": "nT",
-            "fill": "999.9",
-            "description": "1AU IP Bx (nT), GSE"
+            "type": "double",
+            "fill": "999.9"
         },
         {
             "name": "BY_GSE1800",
-            "type": "double",
+            "description": "1AU IP By (nT), GSE",
             "units": "nT",
-            "fill": "999.9",
-            "description": "1AU IP By (nT), GSE"
+            "type": "double",
+            "fill": "999.9"
         },
         {
             "name": "BZ_GSE1800",
-            "type": "double",
+            "description": "1AU IP Bz (nT), GSE",
             "units": "nT",
-            "fill": "999.9",
-            "description": "1AU IP Bz (nT), GSE"
+            "type": "double",
+            "fill": "999.9"
         },
         {
             "name": "BY_GSM1800",
-            "type": "double",
+            "description": "1AU IP By (nT), GSM",
             "units": "nT",
-            "fill": "999.9",
-            "description": "1AU IP By (nT), GSM"
+            "type": "double",
+            "fill": "999.9"
         },
         {
             "name": "BZ_GSM1800",
-            "type": "double",
+            "description": "1AU IP Bz (nT), GSM",
             "units": "nT",
-            "fill": "999.9",
-            "description": "1AU IP Bz (nT), GSM"
+            "type": "double",
+            "fill": "999.9"
         },
         {
             "name": "SIGMA-ABS_B1800",
-            "type": "double",
+            "description": "RMS deviation of average B magnitude (nT)",
             "units": "nT",
-            "fill": "999.9",
-            "description": "RMS deviation of average B magnitude (nT)"
+            "type": "double",
+            "fill": "999.9"
         },
         {
             "name": "SIGMA-B1800",
-            "type": "double",
+            "description": "RMS deviation of magnitude of the average vector field (nT)",
             "units": "nT",
-            "fill": "999.9",
-            "description": "RMS deviation of magnitude of the average vector field (nT)"
+            "type": "double",
+            "fill": "999.9"
         },
         {
             "name": "SIGMA-Bx1800",
-            "type": "double",
+            "description": "RMS deviation Bx (nT), GSE",
             "units": "nT",
-            "fill": "999.9",
-            "description": "RMS deviation Bx (nT), GSE"
+            "type": "double",
+            "fill": "999.9"
         },
         {
             "name": "SIGMA-By1800",
-            "type": "double",
+            "description": "RMS deviation By (nT), GSE",
             "units": "nT",
-            "fill": "999.9",
-            "description": "RMS deviation By (nT), GSE"
+            "type": "double",
+            "fill": "999.9"
         },
         {
             "name": "SIGMA-Bz1800",
-            "type": "double",
+            "description": "RMS deviation Bz (nT), GSE",
             "units": "nT",
-            "fill": "999.9",
-            "description": "RMS deviation Bz (nT), GSE"
+            "type": "double",
+            "fill": "999.9"
         },
         {
             "name": "T1800",
-            "type": "double",
+            "description": "1AU IP Plasma Temperature, deg K, (last currently-available OMNI plasma data Apr 08, 2024)",
             "units": "Deg K",
-            "fill": "9999999.0",
-            "description": "1AU IP Plasma Temperature, deg K, (last currently-available OMNI plasma data May 09, 2022)"
+            "type": "double",
+            "fill": "9999999.0"
         },
         {
             "name": "N1800",
-            "type": "double",
+            "description": "1AU IP Ion number density (per cc)",
             "units": "Per cc",
-            "fill": "999.9",
-            "description": "1AU IP Ion number density (per cc)"
+            "type": "double",
+            "fill": "999.9"
         },
         {
             "name": "V1800",
-            "type": "double",
+            "description": "1AU IP plasma flow speed (km/s)",
             "units": "Km/s",
-            "fill": "9999.0",
-            "description": "1AU IP plasma flow speed (km/s)"
+            "type": "double",
+            "fill": "9999.0"
         },
         {
             "name": "PHI-V1800",
-            "type": "double",
+            "description": "1AU IP plasma flow direction longitude (deg),  phi",
             "units": "Deg",
-            "fill": "999.9",
-            "description": "1AU IP plasma flow direction longitude (deg),  phi"
+            "type": "double",
+            "fill": "999.9"
         },
         {
             "name": "THETA-V1800",
-            "type": "double",
+            "description": "1AU IP plasma flow direction latitude (deg), theta",
             "units": "Deg",
-            "fill": "999.9",
-            "description": "1AU IP plasma flow direction latitude (deg), theta"
+            "type": "double",
+            "fill": "999.9"
         },
         {
             "name": "Ratio1800",
-            "type": "double",
+            "description": "1AU IP Alpha/proton ratio",
             "units": null,
-            "fill": "9.999",
-            "description": "1AU IP Alpha/proton ratio"
+            "type": "double",
+            "fill": "9.999"
         },
         {
             "name": "Pressure1800",
-            "type": "double",
+            "description": "1AU IP Flow pressure (nPa)",
             "units": "nPa",
-            "fill": "99.99",
-            "description": "1AU IP Flow pressure (nPa)"
+            "type": "double",
+            "fill": "99.99"
         },
         {
             "name": "SIGMA-T1800",
-            "type": "double",
+            "description": "RMS deviation of plasma temperature (deg k)",
             "units": "Deg K",
-            "fill": "9999999.0",
-            "description": "RMS deviation of plasma temperature (deg k)"
+            "type": "double",
+            "fill": "9999999.0"
         },
         {
             "name": "SIGMA-N1800",
-            "type": "double",
+            "description": "RMS deviation of ion number density (per cc)",
             "units": "Per cc",
-            "fill": "999.9",
-            "description": "RMS deviation of ion number density (per cc)"
+            "type": "double",
+            "fill": "999.9"
         },
         {
             "name": "SIGMA-V1800",
-            "type": "double",
+            "description": "RMS deviation in plasma flow velocity (km/s)",
             "units": "Km/s",
-            "fill": "9999.0",
-            "description": "RMS deviation in plasma flow velocity (km/s)"
+            "type": "double",
+            "fill": "9999.0"
         },
         {
             "name": "SIGMA-PHI-V1800",
-            "type": "double",
+            "description": "RMS deviation in plasma flow  direction longitude (deg), phi",
             "units": "Deg",
-            "fill": "999.9",
-            "description": "RMS deviation in plasma flow  direction longitude (deg), phi"
+            "type": "double",
+            "fill": "999.9"
         },
         {
             "name": "SIGMA-THETA-V1800",
-            "type": "double",
+            "description": "RMS deviation in plasma flow direction latitude (deg), theta",
             "units": "Deg",
-            "fill": "999.9",
-            "description": "RMS deviation in plasma flow direction latitude (deg), theta"
+            "type": "double",
+            "fill": "999.9"
         },
         {
             "name": "SIGMA-ratio1800",
-            "type": "double",
+            "description": "RMS deviation alpha/proton ratio",
             "units": null,
-            "fill": "9.999",
-            "description": "RMS deviation alpha/proton ratio"
+            "type": "double",
+            "fill": "9.999"
         },
         {
             "name": "E1800",
-            "type": "double",
+            "description": "1AU IP Electric Field (mV/m)",
             "units": "mV/m",
-            "fill": "999.99",
-            "description": "1AU IP Electric Field (mV/m)"
+            "type": "double",
+            "fill": "999.99"
         },
         {
             "name": "Beta1800",
-            "type": "double",
+            "description": "1AU IP Plasma beta",
             "units": null,
-            "fill": "999.99",
-            "description": "1AU IP Plasma beta"
+            "type": "double",
+            "fill": "999.99"
         },
         {
             "name": "Mach_num1800",
-            "type": "double",
+            "description": "1AU IP Alfven mach number",
             "units": null,
-            "fill": "999.9",
-            "description": "1AU IP Alfven mach number"
+            "type": "double",
+            "fill": "999.9"
         },
         {
             "name": "Mgs_mach_num1800",
-            "type": "double",
+            "description": "1AU IP Magnetosonic mach number",
             "units": null,
-            "fill": "99.9",
-            "description": "1AU IP Magnetosonic mach number"
+            "type": "double",
+            "fill": "99.9"
         },
         {
             "name": "PR-FLX_11800",
-            "type": "double",
+            "description": "1AU Proton flux > 1 MeV, 1/(SQcm-ster-s), (last currently-available OMNI proton fluxes Mar 04, 2020)",
             "units": "1/(SQcm-ster-s)",
-            "fill": "999999.99",
-            "description": "1AU Proton flux > 1 MeV, 1/(SQcm-ster-s), (last currently-available OMNI proton fluxes Mar 04, 2020)"
+            "type": "double",
+            "fill": "999999.99"
         },
         {
             "name": "PR-FLX_21800",
-            "type": "double",
+            "description": "1AU Proton flux >2 MeV (1/(SQcm-ster-s))",
             "units": "1/(SQcm-ster-s)",
-            "fill": "99999.99",
-            "description": "1AU Proton flux >2 MeV (1/(SQcm-ster-s))"
+            "type": "double",
+            "fill": "99999.99"
         },
         {
             "name": "PR-FLX_41800",
-            "type": "double",
+            "description": "1AU Proton flux >4 MeV (1/(SQcm-ster-s))",
             "units": "1/(SQcm-ster-s)",
-            "fill": "99999.99",
-            "description": "1AU Proton flux >4 MeV (1/(SQcm-ster-s))"
+            "type": "double",
+            "fill": "99999.99"
         },
         {
             "name": "PR-FLX_101800",
-            "type": "double",
+            "description": "1AU Proton flux >10 MeV (1/(SQcm-ster-s))",
             "units": "1/(SQcm-ster-s)",
-            "fill": "99999.99",
-            "description": "1AU Proton flux >10 MeV (1/(SQcm-ster-s))"
+            "type": "double",
+            "fill": "99999.99"
         },
         {
             "name": "PR-FLX_301800",
-            "type": "double",
+            "description": "1AU Proton flux >30 MeV (1/(SQcm-ster-s))",
             "units": "1/(SQcm-ster-s)",
-            "fill": "99999.99",
-            "description": "1AU Proton flux >30 MeV (1/(SQcm-ster-s))"
+            "type": "double",
+            "fill": "99999.99"
         },
         {
             "name": "PR-FLX_601800",
-            "type": "double",
+            "description": "1AU Proton flux >60 MeV (1/(SQcm-ster-s))",
             "units": "1/(SQcm-ster-s)",
-            "fill": "99999.99",
-            "description": "1AU Proton flux >60 MeV (1/(SQcm-ster-s))"
+            "type": "double",
+            "fill": "99999.99"
         },
         {
             "name": "MFLX1800",
-            "type": "integer",
+            "description": "Magnetospheric Contamination of 1AU Proton Flux code (6=No,<=5 see OMNI documentation)",
             "units": "(6=No,1=All,-1=n/a)",
-            "fill": "0",
-            "description": "Magnetospheric Contamination of 1AU Proton Flux code (6=No,<=5 see OMNI documentation)"
+            "type": "integer",
+            "fill": "0"
         },
         {
             "name": "R1800",
-            "type": "integer",
+            "description": "Daily sunspot number V2, from  http://sidc.oma.be/silso/datafiles/ (1963/001-2024/091)",
             "units": null,
-            "fill": "999",
-            "description": "Daily sunspot number V2, from  http://sidc.oma.be/silso/datafiles/ (1963/001-2022/120)"
+            "type": "integer",
+            "fill": "999"
         },
         {
             "name": "F10_INDEX1800",
-            "type": "double",
+            "description": "F10.7 - Daily 10.7 cm solar radio flux, units: 10**(-22) Joules/second/square-meter/Hertz, from NGDC (1963/001-2024/102),",
             "units": " ",
-            "fill": "999.9",
-            "description": "F10.7 - Daily 10.7 cm solar radio flux, units: 10**(-22) Joules/second/square-meter/Hertz, from NGDC (1963/001-2022/132),"
+            "type": "double",
+            "fill": "999.9"
         },
         {
             "name": "KP1800",
-            "type": "integer",
+            "description": "Kp - 3-hour Kp*10 (Kp=1-,1,1+ corresponds to 7,10,13), fromNGDC (1963/001-2024/102)",
             "units": null,
-            "fill": "99",
-            "description": "Kp - 3-hour Kp*10 (Kp=1-,1,1+ corresponds to 7,10,13), fromNGDC (1963/001-2022/120)"
+            "type": "integer",
+            "fill": "99"
         },
         {
             "name": "DST1800",
-            "type": "integer",
+            "description": "Dst - 1-hour Dst index (1963/001-2014/366), Provisional Dst (2017/001-2023/181), Quick-look Dst (2023/182-2024/102), from WDC Kyoto",
             "units": "nT",
-            "fill": "99999",
-            "description": "Dst - 1-hour Dst index (1963/001-2014/366), Provisional Dst (2015/001-2019/366), Quick-look Dst (2018/001-2022/132), from WDC Kyoto"
+            "type": "integer",
+            "fill": "99999"
         },
         {
             "name": "AE1800",
-            "type": "integer",
+            "description": "AE - 1-hour AE-index,from WDC Kyoto (1963/001-1988/182), Provisional (1990/001-2019/365), from WDC Kyoto",
             "units": "nT",
-            "fill": "9999",
-            "description": "AE - 1-hour AE-index,from WDC Kyoto (1963/001-1988/182), Provisional (1990/001-2018/181), from WDC Kyoto"
+            "type": "integer",
+            "fill": "9999"
         },
         {
             "name": "AP_INDEX1800",
-            "type": "integer",
+            "description": "ap - 3-hour ap-index (1963/001-2024/102), from NGDC",
             "units": "nT",
-            "fill": "999",
-            "description": "ap - 3-hour ap-index (1963/001-2022/120), from NGDC"
+            "type": "integer",
+            "fill": "999"
         },
         {
             "name": "AL_INDEX1800",
-            "type": "integer",
+            "description": "AL - 1-hour AL-index, from WDC Kyoto (1963/001-1988/182), Provisional (1990/001-2018/059), from WDC Kyoto",
             "units": "nT",
-            "fill": "99999",
-            "description": "AL - 1-hour AL-index, from WDC Kyoto (1963/001-1988/182), Provisional (1990/001-2018/059), from WDC Kyoto"
+            "type": "integer",
+            "fill": "99999"
         },
         {
             "name": "AU_INDEX1800",
-            "type": "integer",
+            "description": "AU - 1-hour AU-index,from WDC Kyoto (1963/001-1988/182), Provisional (1990/001-2018/059), from WDC Kyoto",
             "units": "nT",
-            "fill": "99999",
-            "description": "AU - 1-hour AU-index,from WDC Kyoto (1963/001-1988/182), Provisional (1990/001-2018/059), from WDC Kyoto"
+            "type": "integer",
+            "fill": "99999"
         },
         {
             "name": "PC_N_INDEX1800",
-            "type": "double",
+            "description": "PC - 1-hour Polar Cap index (North, Thule station), from NGDC (Final 1975/001-2022/365)",
             "units": " ",
-            "fill": "999.9",
-            "description": "PC - 1-hour Polar Cap index (North, Thule station), from NGDC (Final 1975/001-2020/365)"
+            "type": "double",
+            "fill": "999.9"
         },
         {
             "name": "Solar_Lyman_alpha1800",
-            "type": "double",
+            "description": "Solar Lyman-alpha (1963/001-2024/101)",
             "units": "W/m^2",
-            "fill": "0.999999",
-            "description": "Solar Lyman-alpha (1963/001-2022/131)"
+            "type": "double",
+            "fill": "0.999999"
         },
         {
             "name": "Proton_QI1800",
-            "type": "double",
+            "description": "Solar wind (magnetic energy density)/(kinetic energy density)",
             "units": " ",
-            "fill": "9.9999",
-            "description": "Solar wind (magnetic energy density)/(kinetic energy density)"
+            "type": "double",
+            "fill": "9.9999"
         }
     ],
-    "startDate": "1970-01-01T00:00:00Z",
-    "stopDate": "2022-05-13T16:00:00Z",
-    "resourceURL": "https://cdaweb.gsfc.nasa.gov/misc/NotesO.html#OMNI2_H0_MRG1HR",
-    "contact": "J.H. King, N. Papitashvili @ ADNET, NASA GSFC",
+    "startDate": "1963-01-01T00:00:00Z",
+    "stopDate": "2024-05-09T23:00:00Z",
+    "status": {
+        "code": 1200,
+        "message": "OK"
+    },
     "x_server": "https://cdaweb.gsfc.nasa.gov/hapi",
     "x_dataset": "OMNI2_H0_MRG1HR"
 }
