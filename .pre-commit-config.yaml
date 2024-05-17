@@ -1,0 +1,25 @@
+exclude: ".*(.fits|.fts|.fit|.header|.txt|tca.*|.json|.svg)$"
+repos:
+- repo: https://github.com/kynan/nbstripout
+  rev: 0.7.1
+  hooks:
+    - id: nbstripout
+- repo: https://github.com/pre-commit/pre-commit-hooks
+  rev: v4.6.0
+  hooks:
+    - id: check-ast
+    - id: check-case-conflict
+    - id: trailing-whitespace
+    - id: check-yaml
+    - id: debug-statements
+    - id: check-added-large-files
+      args: ["--enforce-all", "--maxkb=1054"]
+    - id: end-of-file-fixer
+    - id: mixed-line-ending
+- repo: https://github.com/codespell-project/codespell
+  rev: v2.2.6
+  hooks:
+    - id: codespell
+      additional_dependencies:
+        - tomli
+      args: ["--write-changes"]
