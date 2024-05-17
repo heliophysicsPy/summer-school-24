@@ -1,0 +1,197 @@
+# 01a
+from hapiclient import hapi
+from hapiplot import hapiplot
+
+
+server     = 'http://hapi-server.org/servers/SSCWeb/hapi'
+dataset    = 'dscovr'
+parameters = 'X_GSE,Y_GSE,Z_GSE'
+
+start      = '2021-11-25T00:00:00Z'
+stop       = '2021-12-05T00:00:00Z'
+opts       = {'logging': True, 'usecache': True, 'cachedir': './hapicache'}
+
+data_sscweb, meta_sscweb = hapi(server, dataset, parameters, start, stop)
+
+server     = 'https://cdaweb.gsfc.nasa.gov/hapi'
+dataset    = 'DSCOVR_ORBIT_PRE'
+parameters = 'GSE_POS'
+start      = '2021-11-25T00:00:00Z'
+stop       = '2021-12-05T00:00:00Z'
+opts       = {'logging': True, 'usecache': True, 'cachedir': './hapicache'}
+
+data_cdaweb, meta_cdaweb = hapi(server, dataset, parameters, start, stop)
+
+from hapiclient import hapitime2datetime
+
+# After inspection of the metadata, we see that SSCWeb reports in R_E while CDAWeb in km.
+# Convert CDAWeb data to R_E.
+xyz_gse_cdaweb = list(data_cdaweb[0][1]/6371.)
+
+# SSCWeb provides ephemeris as three separate parameters. Here we combine parameters into a list.
+xyz_gse_sscweb = [data_sscweb['X_GSE'][1], data_sscweb['Y_GSE'][1], data_sscweb['Z_GSE'][1]]
+
+time_cdaweb = data_cdaweb['Time'][0].decode()
+
+# Convert from YYYY-DOY to YYYY-MM-DD date format
+time_sscweb = hapitime2datetime([data_sscweb['Time'][0]])[0].strftime('%Y-%m-%dT%H:%M:%S.%fZ')
+
+print('        {0:13s}{1:13s}{2:13s}'.format('X_GSE [R_E]', 'Y_GSE [R_E]', 'Z_GSE [R_E]'))
+print('SSCWeb: {0:<13.8f}{1:<13.8f}{2:<13.8f}\t on {3:s}'.format(*xyz_gse_sscweb, time_sscweb))
+print('CDAWeb: {0:<13.8f}{1:<13.8f}{2:<13.8f}\t on {3:s}'.format(*xyz_gse_cdaweb, time_cdaweb))
+
+#        X_GSE [R_E]  Y_GSE [R_E]  Z_GSE [R_E]  
+#SSCWeb: 243.36926843 1.43711310   13.03130715  	 on 2021-11-25T00:00:00.000000Z
+#CDAWeb: 243.63903103 1.46400240   13.05533682  	 on 2021-11-25T00:00:00.000Z
+
+
+#hapiplot(data_cdaweb, meta_cdaweb);
+#hapiplot(data_sscweb, meta_sscweb);
+
+
+
+
+# 01b
+
+opts = {'logging': True, 'usecache': True, 'cachedir': './hapicache' }
+
+server     = 'https://cdaweb.gsfc.nasa.gov/hapi'
+dataset    = 'OMNI2_H0_MRG1HR'
+parameters = 'DST1800'
+
+data, meta = hapi(server, dataset, parameters, start, stop, **opts)
+hapiplot(data, meta);
+
+server     = 'https://imag-data.bgs.ac.uk/GIN_V1/hapi'
+dataset    = 'her/adjusted/PT1M/hdzf'
+parameters = 'Field_Vector,Field_Magnitude'
+
+data, meta = hapi(server, dataset, parameters, start, stop, **opts)
+hapiplot(data, meta);
+
+dataset    = 'hon/adjusted/PT1M/hdzf'
+data, meta = hapi(server, dataset, parameters, start, stop, **opts)
+hapiplot(data, meta);
+
+dataset    = 'sjg/adjusted/PT1M/hdzf'
+data, meta = hapi(server, dataset, parameters, start, stop, **opts)
+hapiplot(data, meta);
+
+dataset    = 'kak/adjusted/PT1M/hdzf'
+data, meta = hapi(server, dataset, parameters, start, stop, **opts)
+hapiplot(data, meta);
+
+from matplotlib import pyplot as plt
+data['Field_Vector']
+plt.plot(data['Field_Vector'][:,0])
+
+
+
+
+
+# 02a
+from hapiclient import hapi
+from hapiplot import hapiplot
+
+server     = 'https://cdaweb.gsfc.nasa.gov/hapi'
+start      = '2021-10-25T00:00:00Z'
+stop       = '2021-12-05T00:00:00Z'
+opts       = {'logging': False, 'usecache': True, 'cachedir': './hapicache'}
+
+dataset    = 'AC_K0_EPM'
+parameters = 'H_lo,Electron_lo,Electron_hi'
+data, meta = hapi(server, dataset, parameters, start, stop, **opts)
+
+print(f"First time value: {data['Time'][0]}")
+print(f"Last time value:  {data['Time'][-1]}")
+print("")
+print("All parameters on first time step:")
+print(data[0])
+print("All parameters on last time step:")
+print(data[-1])
+
+#First time value: b'2021-10-25T00:00:00.000Z'
+#Last time value:  b'2021-12-04T23:55:00.000Z'
+
+#All parameters on first time step:
+#(b'2021-10-25T00:00:00.000Z', 0.82300001, 1226.18994141, 29.54899979)
+#All parameters on last time step:
+#(b'2021-12-04T23:55:00.000Z', 3.15499997, 3002.64599609, 32.73799896)
+
+
+
+# 02b
+
+from hapiclient import hapi
+
+server     = 'https://hapi-server.org/servers/SSCWeb/hapi'
+dataset    = 'moon'
+parameters = 'X_GEO,Y_GEO,Z_GEO' # This was modified to include Y_GEO and Z_GEO
+start      = '2022-01-01T00:00:00.000Z'
+stop       = '2022-01-10T00:00:00.000Z' 
+opts       = {'logging': False, 'usecache': True, 'cachedir': './hapicache'}
+
+data, meta = hapi(server, dataset, parameters, start, stop, **opts);
+r = (data['X_GEO']**2 + data['Y_GEO']**2 + data['Z_GEO']**2)**0.5
+print(r.mean())
+# 58.31238855924607
+
+
+# 02c
+print("Means")
+print(df.mean())
+print("\nStandard Deviations")
+print(df.std())
+print(f"\nMax value of scalar: {df['scalar'].max()} at time {df['scalar'].idxmax()}")
+
+"""
+Means
+scalar      0.023557
+vector_x    0.023557
+vector_y   -0.690173
+vector_z   -0.999609
+dtype: float64
+
+Standard Deviations
+scalar      0.015847
+vector_x    0.015847
+vector_y    0.011470
+vector_z    0.000388
+dtype: float64
+
+Max value of scalar: 0.04710645070964266 at time 1970-01-01 00:00:09+00:00
+"""
+
+
+
+
+# 02d
+import sys
+import logging
+
+from hapiclient import hapitime2datetime
+
+# Change INFO to WARNING or ERROR to suppress logging messages in this script
+logging.basicConfig(level=logging.INFO)
+
+import pickle as pickle
+with open('hapicache/availability.pkl', 'rb') as f:
+    datasets = pickle.load(f)
+
+# Several students put the info in datasets into a Pandas DataFrame.
+# This is great idea!.
+if False:
+    import pandas
+    df = pandas.DataFrame(datasets)
+    display(df)
+
+# Create table
+n = 0
+datasets.reverse()
+table = []
+for idx, dataset in enumerate(datasets):
+    # Pad ids. Assumes max id length is 14 chars.
+    id = datasets[idx]["id"]
+    idp = '{0:15s}'.format(id)
+    line = f'{idp}  {datasets[idx]["startDate"]}  {datasets[idx]["stopDate"]}'
+    print(line)

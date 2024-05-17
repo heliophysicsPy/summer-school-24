@@ -311,7 +311,7 @@
             "bins": [
                 {
                     "name": "instrumentID",
-                    "units": null,
+                    "units": "kHz",
                     "centers": [
                         1,
                         2
