@@ -3,7 +3,7 @@ from scipy.integrate import solve_ivp
 
 # Put options at the top. Once you have more than a few, it is probably time to refactor.
 test = False
-compare_methods = False
+compare_methods = True
 generate_lines = True
 
 def logger_init():
@@ -61,13 +61,16 @@ def trace(field_function, yz0, events=None, rtol=1e-3, s_eval=None, method='RK23
     s_eval = np.linspace(0, 2, 100)
 
   # https://docs.scipy.org/doc/scipy/reference/generated/scipy.integrate.solve_ivp.html
-  soln = solve_ivp(fun=dXds,
-                  y0=yz0,
-                  t_span=[s_eval[0], s_eval[-1]],
-                  t_eval=s_eval,
-                  events=events,
-                  rtol=rtol,
-                  method=method)
+  kwargs = {
+              "fun": dXds,
+              "y0": yz0,
+              "t_span": [s_eval[0], s_eval[-1]],
+              "t_eval": s_eval,
+              "events": events,
+              "rtol": rtol,
+              "method": method
+  }
+  soln = solve_ivp(**kwargs)
 
   return soln
 
@@ -152,8 +155,21 @@ if test == True:
 
 if generate_lines == True:
   lines = generate()
+
+  # Option 1 for saving data: NumPy's save function
   fname = 'data/lines.npy'
+  logger.info(f'Writing {fname}')
   np.save(fname, lines)
   logger.info(f'Wrote {fname}')
-  # If there is any reason that we would want to inspect the numbers, we could
-  # save each field line in a separate CSV file.
+
+  # Option 2 for saving data: CSV
+  # If there is any reason that we would want to inspect the numbers, save each
+  # field line in a separate CSV file.
+  for i in range(lines.shape[2]):
+    fname = f'data/line_{i}.csv'
+    np.savetxt(fname, lines[:,:,i], delimiter=',')
+    logger.info(f'Wrote {fname}')
+
+  # For discussion:
+  #  1. What are the pros and cons of each option?
+  #  2. What about pkl file, HDF5, or CDF?

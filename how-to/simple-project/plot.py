@@ -4,16 +4,21 @@ import matplotlib.pyplot as plt
 
 # Try to match font used in document in which plot will be embedded.
 # If you plan on presenting on screen and including in a paper, you may want
-# to have two versions of the plot with different font sizes.
+# to have two versions of the plot with different font sizes. Complicating matters
+# is the fact that some journals use sans serif for web and serif in PDFs. 
+# See also
+#   https://stackoverflow.com/questions/8753835/how-to-get-a-list-of-all-the-fonts-currently-available-for-matplotlib
 plt.rcParams.update({'font.size': 14, 'font.family': 'serif'})
 
-lines = np.load('data/lines.npy')
-print('Read data/lines.npy')
+fname = 'data/lines.npy'
+print(f'Reading {fname}')
+lines = np.load(fname)
+print(f'Read {fname}')
 
-# Here I've colored everything black because I don't thing additional colors
+# Here I've colored everything black because I don't think additional colors
 # will add more clarity.
-plt.plot(lines[0,:,:], lines[1,:,:],'k')
-plt.plot(lines[0,0,:], lines[1,0,:],'k.')
+plt.plot(lines[0,:,:], lines[1,:,:], 'k')
+plt.plot(lines[0,0,:], lines[1,0,:], 'k.')
 earth = plt.Circle((0, 0), 1, color='k')
 plt.gca().add_patch(earth)
 plt.xlabel('y or L')
