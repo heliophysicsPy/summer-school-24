@@ -1,3 +1,14 @@
+import datetime
+spacepy.time.Ticktock(0, 'TAI').UTC
+tt = spacepy.time.tickrange('2005-12-31T23:59', '2006-1-1T0:01', datetime.timedelta(seconds=1))
+import matplotlib.pyplot as plt
+#print(tt.UTC)
+print(tt.TAI)
+plt.plot(tt.UTC, tt.TAI)
+print(datetime.datetime(2006, 1, 1) - datetime.datetime(2005, 12, 31, 23, 59, 59))
+print(spacepy.time.Ticktock(datetime.datetime(2006, 1, 1)) - spacepy.time.Ticktock(datetime.datetime(2005, 12, 31, 23, 59, 59)))
+print(spacepy.time.Ticktock(datetime.datetime(2006, 1, 1)).UTC - spacepy.time.Ticktock(datetime.datetime(2005, 12, 31, 23, 59, 59)).UTC)
+
 # 3.1.1
 
 
