@@ -49,7 +49,7 @@ Clustering is useful when you want to determine whether the data can be organize
 
 <a href="https://www.kaggle.com/code/samuelcortinhas/intro-to-pca-t-sne-umap">This article by Samuel Cortinhas on kaggle.com</a> concisely describes several models and compares performance on a distribution of data. 
 
-Our first exercise will focus on data clustering using a simple K-means model.
+**<font color = red>Our first exercise will focus on data clustering using a simple K-means model.</font>**
 
 ### Decision Trees
 
@@ -64,100 +64,62 @@ A good example of decision trees in Heliophysics is "Timing of the solar wind pr
 
 ### Classifiers, Decision Boundaries, and Support Vector Machines
 
-Another general area of machine learning models are **decision boundaries**, which identify a .  A common decision boundary model is called a **Support Vector Machine**, or **SVM**. SVMs create *hyperplanes* that separate an n-dimensional parameter space into different sections.
+Another general area of machine learning models are **decision boundaries**, which divide a dataset into subsets separated by boundaries.  A common decision boundary model is called a **Support Vector Machine**, or **SVM**. SVMs create *hyperplanes* that separate an n-dimensional parameter space into different sections.
+
+Decision boundaries are often used in forecasting, to estimate the probability of an event occurring. <a href="https://helioml.org/02/Predicting_Coronal_Mass_Ejections.html">An example of SVMs and the associated code can be found in the Helio-ML Textbook</a> from a paper by <a href="https://ui.adsabs.harvard.edu/abs/2016ApJ...821..127B/abstract">Bobra & Ilonidis (Astrophysical Journal, 821, 127, 2016)</a>. The model aims to determine whether a flaring region on the Sun will produce an eruption (called a coronal mass ejection). The paper also has an excellent example of using an **interpretable machine learning method** to improve the understanding of the flaring system. 
+
+<font color = red>Our second and third exercises focus on decision boundaries.</font>
 
 ### Neural networks
 
 An excellent description of how neural networks work can be found in <a href="https://www.3blue1brown.com/topics/neural-networks">3Blue1Brown's video series</a>.
 
-(NNs) are usually the most well recognized of the machine learning models. They are essentially a network of matrices and functions. Each set of matrices and functions forms a "layer." The fitting process updates the values in each matrix to better fit the data, and the "neural" aspect is how the outputs from one layer are passed through an **activation function** that applies a weighting factor that can increase or decrease the strength of a value. The activation functions allow the neural network to respond differently to different inputs - in some cases a value may be important while in other cases it is not. A simple activation function may return "1" if the value exceeds a threshold, and "0" otherwise. 
+(NNs) are usually the most well recognized of the machine learning models. They can be relatively simple, or they can be extremely complex.
 
-- NNs can be very simple or extremely complex
-- Usually depends of the problem at hand
+NNs are essentially a network of matrices and functions. Each set of matrices and functions forms a "layer." The fitting process updates the values in each matrix to better fit the data, and the "neural" aspect is how the outputs from one layer are passed through an **activation function** that applies a weighting factor that can increase or decrease the strength of a value. The activation functions allow the neural network to respond differently to different inputs - in some cases a value may be important while in other cases it is not. A simple activation function may return "1" if the value exceeds a threshold, and "0" otherwise. 
+
+An excellent review of activation functions can be found at <a href="https://www.kdnuggets.com/2022/06/activation-functions-work-deep-learning.html">How Activation Functions Work in Deep Learning" on kdnuggets.com</a>. The following figure from the article shows the behavior of several activation functions.
+
+
+**Common Activation Functions**:
+![Common activation functions, figure adapted from kdnuggets.com https://www.kdnuggets.com/2022/06/activation-functions-work-deep-learning.html 
+](/aiml-tutorial/images/activations.png)
+
+
+**Neural Network Structure**:
 
 Important parameters in building a NN:
 - Number of hidden layers
 - Number of neurons or perceptrons in each layer
 - Activation functions
-- Optimizer
+- Optimizer 
 - Loss function (performance measure)
 
+<font color = red>In our final exercise, we will build a neural network classifier model.</font>  
 
 ## Loss Functions and Performance Measures
 
-Loss functions are (objectively) the most important choice when building neural network. 
-They define the goal of the model
-Most common loss function is mean square error (MSE)
-Used most commonly in regression problems (fitting a function)
+A common performance measure is represented by a **loss function**, or **cost function**. A cost function is constructed from parameters that represent how far off the model is from "perfect" performance.  They quantify the model's output relative to the target output. It is rare to achieve perfect performance (because datasets are rarely perfect), so the objective of the model is to find a solution that minimizes the total cost.  
 
+![Simple Decision Tree Diagram
+](/aiml-tutorial/images/performance_measure.png)
 
-Other common loss functions include:
-Mean absolute error (regression)
-Binary crossentropy (mostly classification)
+**Loss functions**, or error functions, can be the most important choice when building a neural network. They define the goal of the model, provide a measure of success, and can make the difference between an effective and ineffective model.
 
+A common loss function is mean square error (MSE).  MSE is often used in regression problems (fitting a function) - a simple least-squares-fit is an example of one.
+
+<a href="https://www.datacamp.com/tutorial/loss-function-in-machine-learning">This article by Richmond Alake on datacamp.com describes a variety of loss functions and how they are commonly used.</a>
 
 
 ## Optimizers 
 
+![Learning rate and loss function diagram, from "Optimizers in Deep Learning" https://musstafa0804.medium.com/optimizers-in-deep-learning-7bf81fed78a0 
+](/aiml-tutorial/images/gradient_loss.png)
 
-We compute the gradientswith respect to the loss function
+The most basic way to iterate on a solution is to compute the gradients with respect to the loss function and update the model towards the direction of decreasing loss. However, there are multiple pitfalls to simply following the gradients: loss functions can have local minima that are not the global minimum, and extremely complex models can be computationally expensive and take a long time to converge.   
 
-The optimizer is the algorithm that determines how you move through the gradient surface
+An **optimizer** is an algorithm that determines how the model navigates the performance measure. In our final learning exercise, we will compare how simple gradient descent (SGD) compares to Adaptive Moment Estimation (usually referred to as Adam).  
 
-Most basic approach is gradient descent
+For an excellent overview of different optimizers, see <a href="https://musstafa0804.medium.com/optimizers-in-deep-learning-7bf81fed78a0">"Optimizers in Deep Learning" on medium.com</a>.
 
-
-
-## Activation Functions
-
-Common activation functions:
-Linear
-Sigmoid
-Tanh
-ReLU
-Softmax
-Other activation functions:
-Softsign
-Softplus
-ELU
-Leaky ReLU
-PReLU
-And many more
-
-
-## Perceptron
-
-
-
-Dataset: x, y coordinates as inputs with binary outputs for classification
-Blue = 0, red = 1
-Goal is to learn the relationship between petal width, stem height, and color
-Need to choose learning rate, numberof epochs, activation function, and optimizer
-Activation function: sigmoid (easy deriv.)
-Optimizer: standard gradient descent
-
-https://drive.google.com/file/d/1ozbESbOJTF4b9pVqd-ODCorM2y9yR9D7/view?usp=sharing
-
-## Perceptron Exercise
-
-
-
-Build a perceptron to solve this classification problem from scratch
-Open Google Colab link on Github page
-
-
-
-## Python ML Libraries
-
-
-
-Two major libraries for ML in Python are TensorFlow and Pytorch
-Tensorflow has Keras application program interface (API)
-Keras makes building models simple
-Pytorch is easier to get creative with
-Complex architectures
-More intricate training algorithms
-Reality: you can do most things whether you use TensorFlow or Pytorch
-Both libraries are commonly used in research and industry
-We will use TensorFlow and Keras
 

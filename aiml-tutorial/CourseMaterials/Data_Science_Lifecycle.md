@@ -69,3 +69,9 @@ For each ML model, there are associated explainable or interpretable methods tha
 
 **Explainability and interpretability work best when they are integrated with your workflow, expecially when selecting and developing your model.** 
 
+## Common mistakes people make
+
+- Improper splitting of data
+- Not examining input and output data closely
+- Thinking you told the model to do something when in reality you did something else
+- Thinking that the model giving an answer means that it is correct in the statistical or subject matter domains
