@@ -37,6 +37,20 @@ An x vs. y least-squares-fit is a common form of linear regression, but there ar
 
 Regression can model both continuous and and discrete variables. **Logistic regression** takes input variables and models the probability of a set of possible outcomes. A common use of logistic regression is prediction of a "yes" or "no" outcome:  Will there be a solar flare?  Will there be a geomagnetic storm?  
 
+### Dimensionality Reduction and Clustering Models
+
+Dimensionality reduction and clustering are common *unsupervised* approaches, meaning you are trying out different representations of the data to see if one provides insight or utility. If you have a complicated dataset and want to turn it to something more manageable, these models are very useful.  
+
+Dimensionality reduction seeks to transform the dataset into fewer dimensions (typically 2 or 3 dimensions) without destroying the useful statistical properties.  A common dimension reduction in Heliophysics is taking *x,y,z* components of plasma velocity and magnetic field, and re-projecting them in two coordinates: normal and transverse to the prevailing magnetic field direction (*Bn* and *Bt*). 
+
+However, if it's not clear what coordinates would serve best for a particular dataset, unsupervised ML models can determine the most information-preserving transformations.  
+
+Clustering is useful when you want to determine whether the data can be organized into separate groups, but you're not sure how those groups are defined. There are many types of clustering models, and sometimes the best way to determine which works best for a particular dataset is to try them out and see how they do.  
+
+<a href="https://www.kaggle.com/code/samuelcortinhas/intro-to-pca-t-sne-umap">This article by Samuel Cortinhas on kaggle.com</a> concisely describes several models and compares performance on a distribution of data. 
+
+Our first exercise will focus on data clustering using a simple K-means model.
+
 ### Decision Trees
 
 Decision trees are models that consist of nodes that apply tests to the data resulting in final results or decision in the resulting "leaves." 
@@ -48,9 +62,9 @@ Two common type of decision tree models are **random forests** and **gradient bo
 
 A good example of decision trees in Heliophysics is "Timing of the solar wind propagation delay between L1 and Earth based on machine learning" by <a href="https://www.swsc-journal.org/articles/swsc/full_html/2021/01/swsc200105/swsc200105.html">Baumann and McCloskey (J. Space Weather Climate, v. 11, 2021)</a>. They compare performance of both random forest and gradient boosting and find results that are superior to linear regression.  
 
-### Decision Boundaries and Support Vector Machines
+### Classifiers, Decision Boundaries, and Support Vector Machines
 
-
+Another general area of machine learning models are **decision boundaries**, which identify a .  A common decision boundary model is called a **Support Vector Machine**, or **SVM**. SVMs create *hyperplanes* that separate an n-dimensional parameter space into different sections.
 
 ### Neural networks
 
