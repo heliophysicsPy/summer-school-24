@@ -64,7 +64,9 @@ A good example of decision trees in Heliophysics is "Timing of the solar wind pr
 
 ### Classifiers, Decision Boundaries, and Support Vector Machines
 
-Another general area of machine learning models are **decision boundaries**, which identify a .  A common decision boundary model is called a **Support Vector Machine**, or **SVM**. SVMs create *hyperplanes* that separate an n-dimensional parameter space into different sections.
+Another general area of machine learning models are **decision boundaries**, which divide a dataset into subsets separated by boundaries.  A common decision boundary model is called a **Support Vector Machine**, or **SVM**. SVMs create *hyperplanes* that separate an n-dimensional parameter space into different sections.
+
+Decision boundaries are often used in forecasting, to estimate the probability of an event occurring. <a href="https://helioml.org/02/Predicting_Coronal_Mass_Ejections.html">An example of SVMs and the associated code can be found in the Helio-ML Textbook</a> from a paper by <a href="https://ui.adsabs.harvard.edu/abs/2016ApJ...821..127B/abstract">Bobra & Ilonidis (Astrophysical Journal, 821, 127, 2016)</a>. The model aims to determine whether a flaring region on the Sun will produce an eruption (called a coronal mass ejection). The paper also has an excellent example of using an **interpretable machine learning method** to improve the understanding of the flaring system. 
 
 <font color = red>Our second and third exercises focus on decision boundaries.</font>
 
