@@ -97,9 +97,14 @@ Important parameters in building a NN:
 
 ## Loss Functions and Performance Measures
 
+A common performance measure is represented by a **loss function**, or **cost function**. A cost function is constructed from parameters that represent how far off the model is from "perfect" performance.  They quantify the model's output relative to the target output. It is rare to achieve perfect performance (because datasets are rarely perfect), so the objective of the model is to find a solution that minimizes the total cost.  
+
+![Simple Decision Tree Diagram
+](/aiml-tutorial/images/performance_measure.png)
+
 **Loss functions**, or error functions, can be the most important choice when building a neural network. They define the goal of the model, provide a measure of success, and can make the difference between an effective and ineffective model.
 
-Loss functions quantify the model's output relative to the target output. A common loss function is mean square error (MSE).  MSE is often used in regression problems (fitting a function) - a simple least-squares-fit is an example of one.
+A common loss function is mean square error (MSE).  MSE is often used in regression problems (fitting a function) - a simple least-squares-fit is an example of one.
 
 <a href="https://www.datacamp.com/tutorial/loss-function-in-machine-learning">This article by Richmond Alake on datacamp.com describes a variety of loss functions and how they are commonly used.</a>
 
