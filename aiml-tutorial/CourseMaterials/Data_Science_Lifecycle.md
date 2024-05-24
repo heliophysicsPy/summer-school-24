@@ -11,28 +11,28 @@ Data Science is much more than running models, and goes far beyond just reducing
 Practitioners of data science have studied best practices to maximize the probability of success. Most agree that "business understanding" or "subject matter expertise" is one of the key steps. And, of course, there is data wrangling, which can be expressed in a variety of ways. 
 
 ![Data Science Lifecycle diagram, Liu et al. 2021, DOI: 10.1007/978-3-031-01340-9_5, license is Creative Commons Attribution 4.0 International
-](/aiml-tutorial/images/Typical-data-science-lifecycle.png)
+](../images/Typical-data-science-lifecycle.png)
 
 <!--
-<img src="/aiml-tutorial/images/Typical-data-science-lifecycle.png" width="300" alt="Data Science Lifecycle diagram, Liu et al. 2021, DOI: 10.1007/978-3-031-01340-9_5, license is Creative Commons Attribution 4.0 International"/>>
+<img src="../images/Typical-data-science-lifecycle.png" width="300" alt="Data Science Lifecycle diagram, Liu et al. 2021, DOI: 10.1007/978-3-031-01340-9_5, license is Creative Commons Attribution 4.0 International"/>>
 -->
 
 Next comes the process of determining which models to try, and which features work best. This is an iterative process, the simple "circle" is misleading. In reality, there are many iterations, thus there are process models such as the *Cross-industry standard process for data mining*, or **CRISP-DM** that express the need to examine and refine your effort at every stage of the lifecycle. 
 
 ![CRISP-DM diagram, Kenneth Jenkins https://commons.wikimedia.org/wiki/File:CRISP-DM_Process_Diagram.png, license is Creative Commons BY-SA 3.0
-](/aiml-tutorial/images/crispdm.png)
+](../images/crispdm.png)
 
 <!--
-<img src="/aiml-tutorial/images/crispdm.png" width="300" alt="CRISP-DM diagram, Kenneth Jenkins https://commons.wikimedia.org/wiki/File:CRISP-DM_Process_Diagram.png, license is Creative Commons BY-SA 3.0"/>>
+<img src="../images/crispdm.png" width="300" alt="CRISP-DM diagram, Kenneth Jenkins https://commons.wikimedia.org/wiki/File:CRISP-DM_Process_Diagram.png, license is Creative Commons BY-SA 3.0"/>>
 -->
 
 A team at NASA GSFC studied several ML efforts for science research, and found that even more iterations are typical. For example, dedicating a lot of effort to "data cleaning" is important, but you may not know whether the dataset is sufficient or appropriate until you examine the data more closely and monitor the machine learning model's performance. The following figure documents one specific effort:  
 
 ![Generalized science lifecycle diagram, Source: Robert Morgenstern and the NASA Model-Based Approach to Machine Learning Science Task Group
-](/aiml-tutorial/images/Generalized_Lifecycle.png)
+](../images/Generalized_Lifecycle.png)
 
 <!--
-<img src="/aiml-tutorial/images/Generalized_Lifecycle.png" alt="Generalized science lifecycle diagram, Source: Robert Morgenstern and the NASA Model-Based Approach to Machine Learning Science Task Group"/>>
+<img src="../images/Generalized_Lifecycle.png" alt="Generalized science lifecycle diagram, Source: Robert Morgenstern and the NASA Model-Based Approach to Machine Learning Science Task Group"/>>
 -->
 ### Data Discovery
 
@@ -42,10 +42,10 @@ Science*, or *SUDS*, expressed in their Phase 1 Council Report (*Owens et al.*, 
 It also is an important way to avoid incorrect or misleading results, and it part of the practice of *Responsible and Ethical AI*.
 
 ![Scientific Process Diagram, Source: Owens et al., Scientific Understanding from Data Science (SUDS) Council Report, v2.5r CL#21-2945
-](/aiml-tutorial/images/suds_diagram.png)
+](../images/suds_diagram.png)
 
 <!--
-<img src="/aiml-tutorial/images/suds_diagram.png.png" alt="Scientific Process Diagram, Source: Owens et al., Scientific Understanding from Data Science (SUDS) Council Report, v2.5r CL#21-2945"/>>
+<img src="../images/suds_diagram.png.png" alt="Scientific Process Diagram, Source: Owens et al., Scientific Understanding from Data Science (SUDS) Council Report, v2.5r CL#21-2945"/>>
 -->
 
 ### Responsible and Ethical AI

@@ -21,7 +21,7 @@ Once you have chosen a candidate model, you **train** the model to perform the t
 It is possible that the model can perform perfectly on the training set. For example, if you have *n* values, the model can result in a polynomial of *n-1* dimensions that exactly hits every data point. However, if you add a new data point, the model may perform poorly. This is called **overfitting.**  A model performs perfectly on a discrete set of data but does not generalize to the other data that you intend to use. In contrast, a model can **underfit** the data, which usually meaning that the model is too simple to be useful. 
 
 ![Underfitting and Overfitting Diagram, by Aarthi Kasirajan https://medium.com/@minions.k/underfit-and-overfit-explained-8161559b37db 
-](/aiml-tutorial/images/under_overfitting.png)
+](../images/under_overfitting.png)
 
 Thus, a model must strike the right balance between overfitting and underfitting. When the model is using the training set and improving according to the performance measure, it is working to reduce the *bias* in the model due to underfitting. To mitigate this tendency, a *validation* set is used to fine-tune the model. If the model has *high variance* and overfits the data, then it will not perform well on the validation set.  The validation set is used to update the **hyperparameters** of the model, which modifies the structure of the model and can be used to penalize overfitting. Thus, the interplay of the training and validation sets allow the model to work towards a robust fit of the data. Finally, the third "split" of the data, the testing set, is used to evaluate how well the model performed overall. 
 
@@ -56,7 +56,7 @@ Clustering is useful when you want to determine whether the data can be organize
 Decision trees are models that consist of nodes that apply tests to the data resulting in final results or decision in the resulting "leaves." 
 
 ![Simple Decision Tree Diagram
-](/aiml-tutorial/images/decision_tree.png)
+](../images/decision_tree.png)
 
 Two common type of decision tree models are **random forests** and **gradient boosting models**.  A random forest combines the output of many individual trees to create a single result, while a gradient boosting model builds one tree at a time, with each consecutive tree, iterating to improve performance.  
 
@@ -83,7 +83,7 @@ An excellent review of activation functions can be found at <a href="https://www
 
 **Common Activation Functions**:
 ![Common activation functions, figure adapted from kdnuggets.com https://www.kdnuggets.com/2022/06/activation-functions-work-deep-learning.html 
-](/aiml-tutorial/images/activations.png)
+](../images/activations.png)
 
 
 **Neural Network Structure**:
@@ -102,7 +102,7 @@ Important parameters in building a NN:
 A common performance measure is represented by a **loss function**, or **cost function**. A cost function is constructed from parameters that represent how far off the model is from "perfect" performance.  They quantify the model's output relative to the target output. It is rare to achieve perfect performance (because datasets are rarely perfect), so the objective of the model is to find a solution that minimizes the total cost.  
 
 ![Simple Decision Tree Diagram
-](/aiml-tutorial/images/performance_measure.png)
+](../images/performance_measure.png)
 
 **Loss functions**, or error functions, can be the most important choice when building a neural network. They define the goal of the model, provide a measure of success, and can make the difference between an effective and ineffective model.
 
@@ -114,7 +114,7 @@ A common loss function is mean square error (MSE).  MSE is often used in regress
 ## Optimizers 
 
 ![Learning rate and loss function diagram, from "Optimizers in Deep Learning" https://musstafa0804.medium.com/optimizers-in-deep-learning-7bf81fed78a0 
-](/aiml-tutorial/images/gradient_loss.png)
+](../images/gradient_loss.png)
 
 The most basic way to iterate on a solution is to compute the gradients with respect to the loss function and update the model towards the direction of decreasing loss. However, there are multiple pitfalls to simply following the gradients: loss functions can have local minima that are not the global minimum, and extremely complex models can be computationally expensive and take a long time to converge.   
 
