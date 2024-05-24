@@ -11,8 +11,6 @@ Python in Heliophysics Summer School</a> held May 20-24, 2024.
 
 ### Machine Learning Tutorial Course Materials
 
-These materials use numpy, matplotlib (pyplot), pandas
-
 
 | Session    | Lecture Topic                         |  Link    |  Timing    |
 |------------|------------------------------------------------|------|---------|
@@ -30,7 +28,6 @@ These materials use numpy, matplotlib (pyplot), pandas
 These materials were developed for the summer school students, but are intended to function as stand-alone lessons freely to be used by anyone.  
 
 The lessons use the following packages:  numpy, pandas, matplotlib, and tensorflow (keras).  
-
 
 ##  Acknowledgments 
 These course materials were developed by the <a href="https://helioanalytics.io"> Center for HelioAnalytics (CfHA)</a> with the support of funding from NASA. We request that any subsequent use acknowledge CfHA. 
