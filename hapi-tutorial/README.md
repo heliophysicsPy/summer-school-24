@@ -1,14 +1,7 @@
 # pyhc-tutorial
 
-Jupyter Notebook tutorials for [HAPI](https://hapi-server.org/) part of the [2022 PyHC Summer School](https://heliopython.org/summer-school
+Jupyter Notebook tutorials for [HAPI](https://hapi-server.org/) part of the [2024 PyHC Summer School](https://heliopython.org/summer-school
 )
-
-```bash
-git clone https://github.com/hapi-server/hapi-pyhc-tutorial/
-pip install hapiclient hapiplot
-cd hapi-pyhc-tutorial
-jupyter-notebook
-```
 
 * [HAPI_00.ipynb](HAPI_00.ipynb) - Overview
 * [HAPI_01.ipynb](HAPI_01.ipynb) - Basics 
