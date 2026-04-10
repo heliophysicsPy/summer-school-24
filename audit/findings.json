@@ -1,0 +1,1397 @@
+[
+  {
+    "severity": "external blocker",
+    "artifact": "(environment)",
+    "location": "PlasmaPy",
+    "category": "environment",
+    "package": "PlasmaPy",
+    "summary": "Editable install failed for `PlasmaPy`.",
+    "evidence": "ERROR: Package 'plasmapy' requires a different Python: 3.11.11 not in '>=3.12'\n\nERROR conda.cli.main_run:execute(125): `conda run python -m pip install --user --no-deps -e /var/folders/4f/t664wvxn4nd8864qfqwknh7r008q5h/T/summer-school-audit-n541fked/repos/PlasmaPy` failed. (See above for error)"
+  },
+  {
+    "severity": "external blocker",
+    "artifact": "(environment)",
+    "location": "pysatMissions",
+    "category": "environment",
+    "package": "pysatMissions",
+    "summary": "Audit environment cannot import `pysatMissions` after setup.",
+    "evidence": "ModuleNotFoundError(\"No module named 'ephem'\")"
+  },
+  {
+    "severity": "external blocker",
+    "artifact": "(environment)",
+    "location": "stixpy",
+    "category": "environment",
+    "package": "stixpy",
+    "summary": "Audit environment cannot import `stixpy` after setup.",
+    "evidence": "ModuleNotFoundError(\"No module named 'stixpy'\")"
+  },
+  {
+    "severity": "external blocker",
+    "artifact": "(environment)",
+    "location": "stixpy",
+    "category": "environment",
+    "package": "stixpy",
+    "summary": "Editable install failed for `stixpy`.",
+    "evidence": "ERROR: Package 'stixpy' requires a different Python: 3.11.11 not in '>=3.12'\n\nERROR conda.cli.main_run:execute(125): `conda run python -m pip install --user --no-deps -e /var/folders/4f/t664wvxn4nd8864qfqwknh7r008q5h/T/summer-school-audit-n541fked/repos/stixpy` failed. (See above for error)"
+  },
+  {
+    "severity": "external blocker",
+    "artifact": "(environment)",
+    "location": "sunpy",
+    "category": "environment",
+    "package": "sunpy",
+    "summary": "Editable install failed for `sunpy`.",
+    "evidence": "ERROR: Package 'sunpy' requires a different Python: 3.11.11 not in '>=3.12'\n\nERROR conda.cli.main_run:execute(125): `conda run python -m pip install --user --no-deps -e /var/folders/4f/t664wvxn4nd8864qfqwknh7r008q5h/T/summer-school-audit-n541fked/repos/sunpy` failed. (See above for error)"
+  },
+  {
+    "severity": "medium",
+    "artifact": "hapi-tutorial/HAPI_00.ipynb",
+    "location": "cell 1",
+    "category": "endpoint",
+    "package": null,
+    "summary": "Artifact references plain HTTP endpoint `http://SERVER/hapi/data?dataset=DATASET&parameters=PARAMETERS&start=START&stop=STOP`.",
+    "evidence": "cell 1 contains `http://SERVER/hapi/data?dataset=DATASET&parameters=PARAMETERS&start=START&stop=STOP`; verify the provider still supports this endpoint in 2026 and prefer HTTPS where available."
+  },
+  {
+    "severity": "medium",
+    "artifact": "hapi-tutorial/HAPI_00.ipynb",
+    "location": "cell 1",
+    "category": "endpoint",
+    "package": null,
+    "summary": "Artifact references plain HTTP endpoint `http://github.com/hapi-server/`.",
+    "evidence": "cell 1 contains `http://github.com/hapi-server/`; verify the provider still supports this endpoint in 2026 and prefer HTTPS where available."
+  },
+  {
+    "severity": "medium",
+    "artifact": "hapi-tutorial/HAPI_00.ipynb",
+    "location": "cell 1",
+    "category": "endpoint",
+    "package": null,
+    "summary": "Artifact references plain HTTP endpoint `http://hapi-server.org/`.",
+    "evidence": "cell 1 contains `http://hapi-server.org/`; verify the provider still supports this endpoint in 2026 and prefer HTTPS where available."
+  },
+  {
+    "severity": "medium",
+    "artifact": "hapi-tutorial/HAPI_00.ipynb",
+    "location": "cell 1",
+    "category": "endpoint",
+    "package": null,
+    "summary": "Artifact references plain HTTP endpoint `http://hapi-server.org/servers/,`.",
+    "evidence": "cell 1 contains `http://hapi-server.org/servers/,`; verify the provider still supports this endpoint in 2026 and prefer HTTPS where available."
+  },
+  {
+    "severity": "medium",
+    "artifact": "hapi-tutorial/HAPI_00.ipynb",
+    "location": "cell 1",
+    "category": "endpoint",
+    "package": null,
+    "summary": "Artifact references plain HTTP endpoint `http://hapi-server.org/servers`.",
+    "evidence": "cell 1 contains `http://hapi-server.org/servers`; verify the provider still supports this endpoint in 2026 and prefer HTTPS where available."
+  },
+  {
+    "severity": "medium",
+    "artifact": "hapi-tutorial/HAPI_01.ipynb",
+    "location": "cell 20",
+    "category": "endpoint",
+    "package": null,
+    "summary": "Artifact references plain HTTP endpoint `http://cdaweb.gsfc.nasa.gov/hapi`.",
+    "evidence": "cell 20 contains `http://cdaweb.gsfc.nasa.gov/hapi`; verify the provider still supports this endpoint in 2026 and prefer HTTPS where available."
+  },
+  {
+    "severity": "medium",
+    "artifact": "hapi-tutorial/HAPI_01.ipynb",
+    "location": "cell 25",
+    "category": "endpoint",
+    "package": null,
+    "summary": "Artifact references plain HTTP endpoint `http://cdaweb.gsfc.nasa.gov/hapi`.",
+    "evidence": "cell 25 contains `http://cdaweb.gsfc.nasa.gov/hapi`; verify the provider still supports this endpoint in 2026 and prefer HTTPS where available."
+  },
+  {
+    "severity": "medium",
+    "artifact": "hapi-tutorial/HAPI_01.ipynb",
+    "location": "cell 9 output",
+    "category": "endpoint",
+    "package": null,
+    "summary": "Artifact references plain HTTP endpoint `http://hapi-server.org/servers/TestData2.0/hapi`.",
+    "evidence": "cell 9 output contains `http://hapi-server.org/servers/TestData2.0/hapi`; verify the provider still supports this endpoint in 2026 and prefer HTTPS where available."
+  },
+  {
+    "severity": "high-risk",
+    "artifact": "hapi-tutorial/HAPI_01.ipynb",
+    "location": "runtime",
+    "category": "runtime",
+    "package": null,
+    "summary": "Notebook execution failed.",
+    "evidence": ""
+  },
+  {
+    "severity": "medium",
+    "artifact": "hapi-tutorial/HAPI_02.ipynb",
+    "location": "cell 28",
+    "category": "endpoint",
+    "package": null,
+    "summary": "Artifact references plain HTTP endpoint `http://hapi-server.org/servers/TestData2.0/hapi`.",
+    "evidence": "cell 28 contains `http://hapi-server.org/servers/TestData2.0/hapi`; verify the provider still supports this endpoint in 2026 and prefer HTTPS where available."
+  },
+  {
+    "severity": "medium",
+    "artifact": "hapi-tutorial/HAPI_02.ipynb",
+    "location": "cell 6",
+    "category": "endpoint",
+    "package": null,
+    "summary": "Artifact references plain HTTP endpoint `http://hapi-server.org/servers/TestData2.0/hapi`.",
+    "evidence": "cell 6 contains `http://hapi-server.org/servers/TestData2.0/hapi`; verify the provider still supports this endpoint in 2026 and prefer HTTPS where available."
+  },
+  {
+    "severity": "medium",
+    "artifact": "hapi-tutorial/HAPI_03.ipynb",
+    "location": "cell 14",
+    "category": "endpoint",
+    "package": null,
+    "summary": "Artifact references plain HTTP endpoint `http://datashop.elasticbeanstalk.com/hapi`.",
+    "evidence": "cell 14 contains `http://datashop.elasticbeanstalk.com/hapi`; verify the provider still supports this endpoint in 2026 and prefer HTTPS where available."
+  },
+  {
+    "severity": "medium",
+    "artifact": "hapi-tutorial/HAPI_03.ipynb",
+    "location": "cell 18",
+    "category": "endpoint",
+    "package": null,
+    "summary": "Artifact references plain HTTP endpoint `http://hapi-server.org/servers/TestData2.0/hapi`.",
+    "evidence": "cell 18 contains `http://hapi-server.org/servers/TestData2.0/hapi`; verify the provider still supports this endpoint in 2026 and prefer HTTPS where available."
+  },
+  {
+    "severity": "medium",
+    "artifact": "hapi-tutorial/HAPI_03.ipynb",
+    "location": "cell 24",
+    "category": "endpoint",
+    "package": null,
+    "summary": "Artifact references plain HTTP endpoint `http://hapi-server.org/servers/TestData2.0/hapi`.",
+    "evidence": "cell 24 contains `http://hapi-server.org/servers/TestData2.0/hapi`; verify the provider still supports this endpoint in 2026 and prefer HTTPS where available."
+  },
+  {
+    "severity": "blocking",
+    "artifact": "hapi-tutorial/HAPI_03.ipynb",
+    "location": "cell 27",
+    "category": "import-drift",
+    "package": "pyspedas",
+    "summary": "Import statement `from pyspedas.hapi.hapi import hapi as pyhapi` fails against the current audit environment.",
+    "evidence": "ModuleNotFoundError: No module named 'pyspedas.hapi' Current source candidates: pyspedas/hapi_tools/hapi.py"
+  },
+  {
+    "severity": "blocking",
+    "artifact": "hapi-tutorial/HAPI_03.ipynb",
+    "location": "cell 27",
+    "category": "runtime",
+    "package": null,
+    "summary": "Notebook execution failed.",
+    "evidence": ""
+  },
+  {
+    "severity": "medium",
+    "artifact": "pysat-tutorial/00 - ACE SWEPAM Demonstration.ipynb",
+    "location": "cell 2 output",
+    "category": "path",
+    "package": null,
+    "summary": "Artifact hard-codes environment-specific path `/home/jovyan/scratch_space/.pysat`.",
+    "evidence": "cell 2 output still points at a Binder/JupyterHub path, which is likely to drift outside the original 2024 teaching environment."
+  },
+  {
+    "severity": "medium",
+    "artifact": "pysat-tutorial/00 - ACE SWEPAM Demonstration.ipynb",
+    "location": "cell 3",
+    "category": "path",
+    "package": null,
+    "summary": "Artifact hard-codes environment-specific path `/home/jovyan/scratch_space/.pysat/`.",
+    "evidence": "cell 3 still points at a Binder/JupyterHub path, which is likely to drift outside the original 2024 teaching environment."
+  },
+  {
+    "severity": "high-risk",
+    "artifact": "pysat-tutorial/00 - ACE SWEPAM Demonstration.ipynb",
+    "location": "cell 3",
+    "category": "runtime",
+    "package": null,
+    "summary": "Notebook execution failed.",
+    "evidence": ""
+  },
+  {
+    "severity": "medium",
+    "artifact": "pysat-tutorial/00 - ACE SWEPAM Demonstration.ipynb",
+    "location": "cell 3 output",
+    "category": "path",
+    "package": null,
+    "summary": "Artifact hard-codes environment-specific path `/home/jovyan/scratch_space/.pysat`.",
+    "evidence": "cell 3 output still points at a Binder/JupyterHub path, which is likely to drift outside the original 2024 teaching environment."
+  },
+  {
+    "severity": "medium",
+    "artifact": "pysat-tutorial/00 - ACE SWEPAM Demonstration.ipynb",
+    "location": "cell 3 output",
+    "category": "path",
+    "package": null,
+    "summary": "Artifact hard-codes environment-specific path `/home/jovyan/scratch_space/.pysat`.",
+    "evidence": "cell 3 output still points at a Binder/JupyterHub path, which is likely to drift outside the original 2024 teaching environment."
+  },
+  {
+    "severity": "medium",
+    "artifact": "pysat-tutorial/00 - ACE SWEPAM Demonstration.ipynb",
+    "location": "cell 6 output",
+    "category": "path",
+    "package": null,
+    "summary": "Artifact hard-codes environment-specific path `/srv/conda/envs/notebook/lib/python3.10/site-packages/pysatSpaceWeather/instruments/ace_swepam.py`.",
+    "evidence": "cell 6 output still points at a Binder/JupyterHub path, which is likely to drift outside the original 2024 teaching environment."
+  },
+  {
+    "severity": "informational",
+    "artifact": "pysat-tutorial/00 - ACE SWEPAM Demonstration.ipynb",
+    "location": "cell 6 output",
+    "category": "stale-output",
+    "package": null,
+    "summary": "Artifact output still references an old site-packages path.",
+    "evidence": "cell 6 output includes `site-packages/pysatSpaceWeather/instruments/ace_swepam.py`, which ties the notebook output to the historical 2024 environment."
+  },
+  {
+    "severity": "medium",
+    "artifact": "pysat-tutorial/01 - ACE SIS Customization.ipynb",
+    "location": "cell 3",
+    "category": "path",
+    "package": null,
+    "summary": "Artifact hard-codes environment-specific path `/home/jovyan/scratch_space/.pysat/`.",
+    "evidence": "cell 3 still points at a Binder/JupyterHub path, which is likely to drift outside the original 2024 teaching environment."
+  },
+  {
+    "severity": "high-risk",
+    "artifact": "pysat-tutorial/01 - ACE SIS Customization.ipynb",
+    "location": "cell 3",
+    "category": "runtime",
+    "package": null,
+    "summary": "Notebook execution failed.",
+    "evidence": ""
+  },
+  {
+    "severity": "medium",
+    "artifact": "pysat-tutorial/01 - ACE SIS Customization.ipynb",
+    "location": "cell 3 output",
+    "category": "path",
+    "package": null,
+    "summary": "Artifact hard-codes environment-specific path `/home/jovyan/scratch_space/.pysat`.",
+    "evidence": "cell 3 output still points at a Binder/JupyterHub path, which is likely to drift outside the original 2024 teaching environment."
+  },
+  {
+    "severity": "medium",
+    "artifact": "pysat-tutorial/01 - ACE SIS Customization.ipynb",
+    "location": "cell 3 output",
+    "category": "path",
+    "package": null,
+    "summary": "Artifact hard-codes environment-specific path `/home/jovyan/scratch_space/.pysat`.",
+    "evidence": "cell 3 output still points at a Binder/JupyterHub path, which is likely to drift outside the original 2024 teaching environment."
+  },
+  {
+    "severity": "medium",
+    "artifact": "pysat-tutorial/01 - ACE SIS Customization.ipynb",
+    "location": "cell 4 output",
+    "category": "path",
+    "package": null,
+    "summary": "Artifact hard-codes environment-specific path `/home/jovyan/.pysat`.",
+    "evidence": "cell 4 output still points at a Binder/JupyterHub path, which is likely to drift outside the original 2024 teaching environment."
+  },
+  {
+    "severity": "medium",
+    "artifact": "pysat-tutorial/01 - ACE SIS Customization.ipynb",
+    "location": "cell 7 output",
+    "category": "path",
+    "package": null,
+    "summary": "Artifact hard-codes environment-specific path `/srv/conda/envs/notebook/lib/python3.10/site-packages/pysatSpaceWeather/instruments/ace_sis.py`.",
+    "evidence": "cell 7 output still points at a Binder/JupyterHub path, which is likely to drift outside the original 2024 teaching environment."
+  },
+  {
+    "severity": "informational",
+    "artifact": "pysat-tutorial/01 - ACE SIS Customization.ipynb",
+    "location": "cell 7 output",
+    "category": "stale-output",
+    "package": null,
+    "summary": "Artifact output still references an old site-packages path.",
+    "evidence": "cell 7 output includes `site-packages/pysatSpaceWeather/instruments/ace_sis.py`, which ties the notebook output to the historical 2024 environment."
+  },
+  {
+    "severity": "medium",
+    "artifact": "pysat-tutorial/02 - DMSP Polar Ion Drifts.ipynb",
+    "location": "cell 3",
+    "category": "path",
+    "package": null,
+    "summary": "Artifact hard-codes environment-specific path `/home/jovyan/scratch_space/.pysat/`.",
+    "evidence": "cell 3 still points at a Binder/JupyterHub path, which is likely to drift outside the original 2024 teaching environment."
+  },
+  {
+    "severity": "high-risk",
+    "artifact": "pysat-tutorial/02 - DMSP Polar Ion Drifts.ipynb",
+    "location": "cell 3",
+    "category": "runtime",
+    "package": null,
+    "summary": "Notebook execution failed.",
+    "evidence": ""
+  },
+  {
+    "severity": "medium",
+    "artifact": "pysat-tutorial/02 - DMSP Polar Ion Drifts.ipynb",
+    "location": "cell 3 output",
+    "category": "path",
+    "package": null,
+    "summary": "Artifact hard-codes environment-specific path `/home/jovyan/scratch_space/.pysat`.",
+    "evidence": "cell 3 output still points at a Binder/JupyterHub path, which is likely to drift outside the original 2024 teaching environment."
+  },
+  {
+    "severity": "medium",
+    "artifact": "pysat-tutorial/02 - DMSP Polar Ion Drifts.ipynb",
+    "location": "cell 3 output",
+    "category": "path",
+    "package": null,
+    "summary": "Artifact hard-codes environment-specific path `/home/jovyan/scratch_space/.pysat`.",
+    "evidence": "cell 3 output still points at a Binder/JupyterHub path, which is likely to drift outside the original 2024 teaching environment."
+  },
+  {
+    "severity": "medium",
+    "artifact": "pysat-tutorial/02 - DMSP Polar Ion Drifts.ipynb",
+    "location": "cell 6 output",
+    "category": "path",
+    "package": null,
+    "summary": "Artifact hard-codes environment-specific path `/srv/conda/envs/notebook/lib/python3.10/site-packages/pysatMadrigal/instruments/dmsp_ivm.py`.",
+    "evidence": "cell 6 output still points at a Binder/JupyterHub path, which is likely to drift outside the original 2024 teaching environment."
+  },
+  {
+    "severity": "informational",
+    "artifact": "pysat-tutorial/02 - DMSP Polar Ion Drifts.ipynb",
+    "location": "cell 6 output",
+    "category": "stale-output",
+    "package": null,
+    "summary": "Artifact output still references an old site-packages path.",
+    "evidence": "cell 6 output includes `site-packages/pysatMadrigal/instruments/dmsp_ivm.py`, which ties the notebook output to the historical 2024 environment."
+  },
+  {
+    "severity": "medium",
+    "artifact": "pysat-tutorial/03 - ICON IVM Demonstration.ipynb",
+    "location": "cell 4",
+    "category": "path",
+    "package": null,
+    "summary": "Artifact hard-codes environment-specific path `/home/jovyan/scratch_space/.pysat/`.",
+    "evidence": "cell 4 still points at a Binder/JupyterHub path, which is likely to drift outside the original 2024 teaching environment."
+  },
+  {
+    "severity": "high-risk",
+    "artifact": "pysat-tutorial/03 - ICON IVM Demonstration.ipynb",
+    "location": "cell 4",
+    "category": "runtime",
+    "package": null,
+    "summary": "Notebook execution failed.",
+    "evidence": ""
+  },
+  {
+    "severity": "medium",
+    "artifact": "pysat-tutorial/03 - ICON IVM Demonstration.ipynb",
+    "location": "cell 4 output",
+    "category": "path",
+    "package": null,
+    "summary": "Artifact hard-codes environment-specific path `/home/jovyan/scratch_space/.pysat`.",
+    "evidence": "cell 4 output still points at a Binder/JupyterHub path, which is likely to drift outside the original 2024 teaching environment."
+  },
+  {
+    "severity": "medium",
+    "artifact": "pysat-tutorial/03 - ICON IVM Demonstration.ipynb",
+    "location": "cell 4 output",
+    "category": "path",
+    "package": null,
+    "summary": "Artifact hard-codes environment-specific path `/home/jovyan/scratch_space/.pysat`.",
+    "evidence": "cell 4 output still points at a Binder/JupyterHub path, which is likely to drift outside the original 2024 teaching environment."
+  },
+  {
+    "severity": "medium",
+    "artifact": "pysat-tutorial/03 - ICON IVM Demonstration.ipynb",
+    "location": "cell 7 output",
+    "category": "path",
+    "package": null,
+    "summary": "Artifact hard-codes environment-specific path `/srv/conda/envs/notebook/lib/python3.10/site-packages/pysatNASA/instruments/icon_ivm.py`.",
+    "evidence": "cell 7 output still points at a Binder/JupyterHub path, which is likely to drift outside the original 2024 teaching environment."
+  },
+  {
+    "severity": "informational",
+    "artifact": "pysat-tutorial/03 - ICON IVM Demonstration.ipynb",
+    "location": "cell 7 output",
+    "category": "stale-output",
+    "package": null,
+    "summary": "Artifact output still references an old site-packages path.",
+    "evidence": "cell 7 output includes `site-packages/pysatNASA/instruments/icon_ivm.py`, which ties the notebook output to the historical 2024 environment."
+  },
+  {
+    "severity": "medium",
+    "artifact": "pysat-tutorial/04 - ICON MIGHTI Demonstration.ipynb",
+    "location": "cell 4",
+    "category": "path",
+    "package": null,
+    "summary": "Artifact hard-codes environment-specific path `/home/jovyan/scratch_space/.pysat/`.",
+    "evidence": "cell 4 still points at a Binder/JupyterHub path, which is likely to drift outside the original 2024 teaching environment."
+  },
+  {
+    "severity": "high-risk",
+    "artifact": "pysat-tutorial/04 - ICON MIGHTI Demonstration.ipynb",
+    "location": "cell 4",
+    "category": "runtime",
+    "package": null,
+    "summary": "Notebook execution failed.",
+    "evidence": ""
+  },
+  {
+    "severity": "medium",
+    "artifact": "pysat-tutorial/04 - ICON MIGHTI Demonstration.ipynb",
+    "location": "cell 4 output",
+    "category": "path",
+    "package": null,
+    "summary": "Artifact hard-codes environment-specific path `/home/jovyan/scratch_space/.pysat`.",
+    "evidence": "cell 4 output still points at a Binder/JupyterHub path, which is likely to drift outside the original 2024 teaching environment."
+  },
+  {
+    "severity": "medium",
+    "artifact": "pysat-tutorial/04 - ICON MIGHTI Demonstration.ipynb",
+    "location": "cell 4 output",
+    "category": "path",
+    "package": null,
+    "summary": "Artifact hard-codes environment-specific path `/home/jovyan/scratch_space/.pysat`.",
+    "evidence": "cell 4 output still points at a Binder/JupyterHub path, which is likely to drift outside the original 2024 teaching environment."
+  },
+  {
+    "severity": "medium",
+    "artifact": "pysat-tutorial/04 - ICON MIGHTI Demonstration.ipynb",
+    "location": "cell 7 output",
+    "category": "path",
+    "package": null,
+    "summary": "Artifact hard-codes environment-specific path `/srv/conda/envs/notebook/lib/python3.10/site-packages/pysatNASA/instruments/icon_mighti.py`.",
+    "evidence": "cell 7 output still points at a Binder/JupyterHub path, which is likely to drift outside the original 2024 teaching environment."
+  },
+  {
+    "severity": "informational",
+    "artifact": "pysat-tutorial/04 - ICON MIGHTI Demonstration.ipynb",
+    "location": "cell 7 output",
+    "category": "stale-output",
+    "package": null,
+    "summary": "Artifact output still references an old site-packages path.",
+    "evidence": "cell 7 output includes `site-packages/pysatNASA/instruments/icon_mighti.py`, which ties the notebook output to the historical 2024 environment."
+  },
+  {
+    "severity": "medium",
+    "artifact": "pysat-tutorial/05 - pysat Creating netCDF4 Files.ipynb",
+    "location": "cell 10 output",
+    "category": "path",
+    "package": null,
+    "summary": "Artifact hard-codes environment-specific path `/home/jovyan/scratch_space/.pysat/pysat/testing/`.",
+    "evidence": "cell 10 output still points at a Binder/JupyterHub path, which is likely to drift outside the original 2024 teaching environment."
+  },
+  {
+    "severity": "medium",
+    "artifact": "pysat-tutorial/05 - pysat Creating netCDF4 Files.ipynb",
+    "location": "cell 11 output",
+    "category": "path",
+    "package": null,
+    "summary": "Artifact hard-codes environment-specific path `/home/jovyan/scratch_space/.pysat/pysat/testing`.",
+    "evidence": "cell 11 output still points at a Binder/JupyterHub path, which is likely to drift outside the original 2024 teaching environment."
+  },
+  {
+    "severity": "medium",
+    "artifact": "pysat-tutorial/05 - pysat Creating netCDF4 Files.ipynb",
+    "location": "cell 11 output",
+    "category": "endpoint",
+    "package": null,
+    "summary": "Artifact references plain HTTP endpoint `http://doi.org/10.5281/zenodo.1199703`.",
+    "evidence": "cell 11 output contains `http://doi.org/10.5281/zenodo.1199703`; verify the provider still supports this endpoint in 2026 and prefer HTTPS where available."
+  },
+  {
+    "severity": "informational",
+    "artifact": "pysat-tutorial/05 - pysat Creating netCDF4 Files.ipynb",
+    "location": "cell 3 output",
+    "category": "stale-output",
+    "package": "pysat",
+    "summary": "Artifact output still records package version `pysat 3.2.0`.",
+    "evidence": "cell 3 output contains a captured environment version line from the 2024 run; this is documentation drift even when code still executes."
+  },
+  {
+    "severity": "informational",
+    "artifact": "pysat-tutorial/05 - pysat Creating netCDF4 Files.ipynb",
+    "location": "cell 3 output",
+    "category": "stale-output",
+    "package": "pysatMadrigal",
+    "summary": "Artifact output still records package version `pysatMadrigal 0.2.0`.",
+    "evidence": "cell 3 output contains a captured environment version line from the 2024 run; this is documentation drift even when code still executes."
+  },
+  {
+    "severity": "informational",
+    "artifact": "pysat-tutorial/05 - pysat Creating netCDF4 Files.ipynb",
+    "location": "cell 3 output",
+    "category": "stale-output",
+    "package": "pysatMissions",
+    "summary": "Artifact output still records package version `pysatMissions 0.3.4`.",
+    "evidence": "cell 3 output contains a captured environment version line from the 2024 run; this is documentation drift even when code still executes."
+  },
+  {
+    "severity": "informational",
+    "artifact": "pysat-tutorial/05 - pysat Creating netCDF4 Files.ipynb",
+    "location": "cell 3 output",
+    "category": "stale-output",
+    "package": "pysatNASA",
+    "summary": "Artifact output still records package version `pysatNASA 0.0.5`.",
+    "evidence": "cell 3 output contains a captured environment version line from the 2024 run; this is documentation drift even when code still executes."
+  },
+  {
+    "severity": "informational",
+    "artifact": "pysat-tutorial/05 - pysat Creating netCDF4 Files.ipynb",
+    "location": "cell 3 output",
+    "category": "stale-output",
+    "package": "pysatSeasons",
+    "summary": "Artifact output still records package version `pysatSeasons 0.2.0`.",
+    "evidence": "cell 3 output contains a captured environment version line from the 2024 run; this is documentation drift even when code still executes."
+  },
+  {
+    "severity": "informational",
+    "artifact": "pysat-tutorial/05 - pysat Creating netCDF4 Files.ipynb",
+    "location": "cell 3 output",
+    "category": "stale-output",
+    "package": "pysatSpaceWeather",
+    "summary": "Artifact output still records package version `pysatSpaceWeather 0.1.0`.",
+    "evidence": "cell 3 output contains a captured environment version line from the 2024 run; this is documentation drift even when code still executes."
+  },
+  {
+    "severity": "medium",
+    "artifact": "pysat-tutorial/05 - pysat Creating netCDF4 Files.ipynb",
+    "location": "cell 4",
+    "category": "path",
+    "package": null,
+    "summary": "Artifact hard-codes environment-specific path `/home/jovyan/scratch_space/.pysat/`.",
+    "evidence": "cell 4 still points at a Binder/JupyterHub path, which is likely to drift outside the original 2024 teaching environment."
+  },
+  {
+    "severity": "high-risk",
+    "artifact": "pysat-tutorial/05 - pysat Creating netCDF4 Files.ipynb",
+    "location": "cell 4",
+    "category": "runtime",
+    "package": null,
+    "summary": "Notebook execution failed.",
+    "evidence": ""
+  },
+  {
+    "severity": "medium",
+    "artifact": "pysat-tutorial/05 - pysat Creating netCDF4 Files.ipynb",
+    "location": "cell 4 output",
+    "category": "path",
+    "package": null,
+    "summary": "Artifact hard-codes environment-specific path `/home/jovyan/scratch_space/.pysat`.",
+    "evidence": "cell 4 output still points at a Binder/JupyterHub path, which is likely to drift outside the original 2024 teaching environment."
+  },
+  {
+    "severity": "medium",
+    "artifact": "pysat-tutorial/05 - pysat Creating netCDF4 Files.ipynb",
+    "location": "cell 4 output",
+    "category": "path",
+    "package": null,
+    "summary": "Artifact hard-codes environment-specific path `/home/jovyan/scratch_space/.pysat`.",
+    "evidence": "cell 4 output still points at a Binder/JupyterHub path, which is likely to drift outside the original 2024 teaching environment."
+  },
+  {
+    "severity": "blocking",
+    "artifact": "pysat-tutorial/06 - pysatMissions.ipynb",
+    "location": "cell 3",
+    "category": "import-drift",
+    "package": "pysatMissions",
+    "summary": "Import statement `import pysatMissions` fails against the current audit environment.",
+    "evidence": "ModuleNotFoundError: No module named 'ephem'"
+  },
+  {
+    "severity": "blocking",
+    "artifact": "pysat-tutorial/06 - pysatMissions.ipynb",
+    "location": "cell 3",
+    "category": "runtime",
+    "package": null,
+    "summary": "Notebook execution failed.",
+    "evidence": ""
+  },
+  {
+    "severity": "medium",
+    "artifact": "pysat-tutorial/06 - pysatMissions.ipynb",
+    "location": "cell 4",
+    "category": "path",
+    "package": null,
+    "summary": "Artifact hard-codes environment-specific path `/home/jovyan/scratch_space/.pysat/`.",
+    "evidence": "cell 4 still points at a Binder/JupyterHub path, which is likely to drift outside the original 2024 teaching environment."
+  },
+  {
+    "severity": "medium",
+    "artifact": "pysat-tutorial/06 - pysatMissions.ipynb",
+    "location": "cell 4 output",
+    "category": "path",
+    "package": null,
+    "summary": "Artifact hard-codes environment-specific path `/home/jovyan/scratch_space/.pysat`.",
+    "evidence": "cell 4 output still points at a Binder/JupyterHub path, which is likely to drift outside the original 2024 teaching environment."
+  },
+  {
+    "severity": "medium",
+    "artifact": "pysat-tutorial/06 - pysatMissions.ipynb",
+    "location": "cell 4 output",
+    "category": "path",
+    "package": null,
+    "summary": "Artifact hard-codes environment-specific path `/home/jovyan/scratch_space/.pysat`.",
+    "evidence": "cell 4 output still points at a Binder/JupyterHub path, which is likely to drift outside the original 2024 teaching environment."
+  },
+  {
+    "severity": "medium",
+    "artifact": "pysat-tutorial/06 - pysatMissions.ipynb",
+    "location": "cell 5 output",
+    "category": "path",
+    "package": null,
+    "summary": "Artifact hard-codes environment-specific path `/home/jovyan/scratch_space/.pysat`.",
+    "evidence": "cell 5 output still points at a Binder/JupyterHub path, which is likely to drift outside the original 2024 teaching environment."
+  },
+  {
+    "severity": "medium",
+    "artifact": "pysat-tutorial/06 - pysatMissions.ipynb",
+    "location": "cell 8 output",
+    "category": "path",
+    "package": null,
+    "summary": "Artifact hard-codes environment-specific path `/srv/conda/envs/notebook/lib/python3.10/site-packages/pysatMissions/instruments/missions_sgp4.py`.",
+    "evidence": "cell 8 output still points at a Binder/JupyterHub path, which is likely to drift outside the original 2024 teaching environment."
+  },
+  {
+    "severity": "informational",
+    "artifact": "pysat-tutorial/06 - pysatMissions.ipynb",
+    "location": "cell 8 output",
+    "category": "stale-output",
+    "package": null,
+    "summary": "Artifact output still references an old site-packages path.",
+    "evidence": "cell 8 output includes `site-packages/pysatMissions/instruments/missions_sgp4.py`, which ties the notebook output to the historical 2024 environment."
+  },
+  {
+    "severity": "medium",
+    "artifact": "pysat-tutorial/07 - pysatSeasons Bin Averaging.ipynb",
+    "location": "cell 4",
+    "category": "path",
+    "package": null,
+    "summary": "Artifact hard-codes environment-specific path `/home/jovyan/scratch_space/.pysat/`.",
+    "evidence": "cell 4 still points at a Binder/JupyterHub path, which is likely to drift outside the original 2024 teaching environment."
+  },
+  {
+    "severity": "high-risk",
+    "artifact": "pysat-tutorial/07 - pysatSeasons Bin Averaging.ipynb",
+    "location": "cell 4",
+    "category": "runtime",
+    "package": null,
+    "summary": "Notebook execution failed.",
+    "evidence": ""
+  },
+  {
+    "severity": "medium",
+    "artifact": "pysat-tutorial/07 - pysatSeasons Bin Averaging.ipynb",
+    "location": "cell 4 output",
+    "category": "path",
+    "package": null,
+    "summary": "Artifact hard-codes environment-specific path `/home/jovyan/scratch_space/.pysat`.",
+    "evidence": "cell 4 output still points at a Binder/JupyterHub path, which is likely to drift outside the original 2024 teaching environment."
+  },
+  {
+    "severity": "medium",
+    "artifact": "pysat-tutorial/07 - pysatSeasons Bin Averaging.ipynb",
+    "location": "cell 4 output",
+    "category": "path",
+    "package": null,
+    "summary": "Artifact hard-codes environment-specific path `/home/jovyan/scratch_space/.pysat`.",
+    "evidence": "cell 4 output still points at a Binder/JupyterHub path, which is likely to drift outside the original 2024 teaching environment."
+  },
+  {
+    "severity": "medium",
+    "artifact": "pysat-tutorial/08 - pysatSeasons Occurrence Probability.ipynb",
+    "location": "cell 10 output",
+    "category": "path",
+    "package": null,
+    "summary": "Artifact hard-codes environment-specific path `/srv/conda/envs/notebook/lib/python3.10/site-packages/pysatSeasons/occur_prob.py:260:`.",
+    "evidence": "cell 10 output still points at a Binder/JupyterHub path, which is likely to drift outside the original 2024 teaching environment."
+  },
+  {
+    "severity": "informational",
+    "artifact": "pysat-tutorial/08 - pysatSeasons Occurrence Probability.ipynb",
+    "location": "cell 10 output",
+    "category": "stale-output",
+    "package": null,
+    "summary": "Artifact output still references an old site-packages path.",
+    "evidence": "cell 10 output includes `site-packages/pysatSeasons/occur_prob.py:260:`, which ties the notebook output to the historical 2024 environment."
+  },
+  {
+    "severity": "medium",
+    "artifact": "pysat-tutorial/08 - pysatSeasons Occurrence Probability.ipynb",
+    "location": "cell 4",
+    "category": "path",
+    "package": null,
+    "summary": "Artifact hard-codes environment-specific path `/home/jovyan/scratch_space/.pysat/`.",
+    "evidence": "cell 4 still points at a Binder/JupyterHub path, which is likely to drift outside the original 2024 teaching environment."
+  },
+  {
+    "severity": "high-risk",
+    "artifact": "pysat-tutorial/08 - pysatSeasons Occurrence Probability.ipynb",
+    "location": "cell 4",
+    "category": "runtime",
+    "package": null,
+    "summary": "Notebook execution failed.",
+    "evidence": ""
+  },
+  {
+    "severity": "medium",
+    "artifact": "pysat-tutorial/08 - pysatSeasons Occurrence Probability.ipynb",
+    "location": "cell 4 output",
+    "category": "path",
+    "package": null,
+    "summary": "Artifact hard-codes environment-specific path `/home/jovyan/scratch_space/.pysat`.",
+    "evidence": "cell 4 output still points at a Binder/JupyterHub path, which is likely to drift outside the original 2024 teaching environment."
+  },
+  {
+    "severity": "medium",
+    "artifact": "pysat-tutorial/08 - pysatSeasons Occurrence Probability.ipynb",
+    "location": "cell 4 output",
+    "category": "path",
+    "package": null,
+    "summary": "Artifact hard-codes environment-specific path `/home/jovyan/scratch_space/.pysat`.",
+    "evidence": "cell 4 output still points at a Binder/JupyterHub path, which is likely to drift outside the original 2024 teaching environment."
+  },
+  {
+    "severity": "medium",
+    "artifact": "pysat-tutorial/09 - pysat Loading.ipynb",
+    "location": "cell 4",
+    "category": "path",
+    "package": null,
+    "summary": "Artifact hard-codes environment-specific path `/home/jovyan/scratch_space/.pysat/`.",
+    "evidence": "cell 4 still points at a Binder/JupyterHub path, which is likely to drift outside the original 2024 teaching environment."
+  },
+  {
+    "severity": "high-risk",
+    "artifact": "pysat-tutorial/09 - pysat Loading.ipynb",
+    "location": "cell 4",
+    "category": "runtime",
+    "package": null,
+    "summary": "Notebook execution failed.",
+    "evidence": ""
+  },
+  {
+    "severity": "medium",
+    "artifact": "pysat-tutorial/09 - pysat Loading.ipynb",
+    "location": "cell 4 output",
+    "category": "path",
+    "package": null,
+    "summary": "Artifact hard-codes environment-specific path `/home/jovyan/scratch_space/.pysat`.",
+    "evidence": "cell 4 output still points at a Binder/JupyterHub path, which is likely to drift outside the original 2024 teaching environment."
+  },
+  {
+    "severity": "medium",
+    "artifact": "pysat-tutorial/09 - pysat Loading.ipynb",
+    "location": "cell 4 output",
+    "category": "path",
+    "package": null,
+    "summary": "Artifact hard-codes environment-specific path `/home/jovyan/scratch_space/.pysat`.",
+    "evidence": "cell 4 output still points at a Binder/JupyterHub path, which is likely to drift outside the original 2024 teaching environment."
+  },
+  {
+    "severity": "medium",
+    "artifact": "pysat-tutorial/10 - pysat Iteration.ipynb",
+    "location": "cell 4",
+    "category": "path",
+    "package": null,
+    "summary": "Artifact hard-codes environment-specific path `/home/jovyan/scratch_space/.pysat/`.",
+    "evidence": "cell 4 still points at a Binder/JupyterHub path, which is likely to drift outside the original 2024 teaching environment."
+  },
+  {
+    "severity": "high-risk",
+    "artifact": "pysat-tutorial/10 - pysat Iteration.ipynb",
+    "location": "cell 4",
+    "category": "runtime",
+    "package": null,
+    "summary": "Notebook execution failed.",
+    "evidence": ""
+  },
+  {
+    "severity": "medium",
+    "artifact": "pysat-tutorial/10 - pysat Iteration.ipynb",
+    "location": "cell 4 output",
+    "category": "path",
+    "package": null,
+    "summary": "Artifact hard-codes environment-specific path `/home/jovyan/scratch_space/.pysat`.",
+    "evidence": "cell 4 output still points at a Binder/JupyterHub path, which is likely to drift outside the original 2024 teaching environment."
+  },
+  {
+    "severity": "medium",
+    "artifact": "pysat-tutorial/10 - pysat Iteration.ipynb",
+    "location": "cell 4 output",
+    "category": "path",
+    "package": null,
+    "summary": "Artifact hard-codes environment-specific path `/home/jovyan/scratch_space/.pysat`.",
+    "evidence": "cell 4 output still points at a Binder/JupyterHub path, which is likely to drift outside the original 2024 teaching environment."
+  },
+  {
+    "severity": "medium",
+    "artifact": "pysat-tutorial/11 - pysat Instantiation and Parameters.ipynb",
+    "location": "cell 14 output",
+    "category": "path",
+    "package": null,
+    "summary": "Artifact hard-codes environment-specific path `/home/jovyan/scratch_space/.pysat`.",
+    "evidence": "cell 14 output still points at a Binder/JupyterHub path, which is likely to drift outside the original 2024 teaching environment."
+  },
+  {
+    "severity": "medium",
+    "artifact": "pysat-tutorial/11 - pysat Instantiation and Parameters.ipynb",
+    "location": "cell 18 output",
+    "category": "path",
+    "package": null,
+    "summary": "Artifact hard-codes environment-specific path `/home/jovyan/scratch_space/.pysat`.",
+    "evidence": "cell 18 output still points at a Binder/JupyterHub path, which is likely to drift outside the original 2024 teaching environment."
+  },
+  {
+    "severity": "medium",
+    "artifact": "pysat-tutorial/11 - pysat Instantiation and Parameters.ipynb",
+    "location": "cell 4",
+    "category": "path",
+    "package": null,
+    "summary": "Artifact hard-codes environment-specific path `/home/jovyan/scratch_space/.pysat/`.",
+    "evidence": "cell 4 still points at a Binder/JupyterHub path, which is likely to drift outside the original 2024 teaching environment."
+  },
+  {
+    "severity": "high-risk",
+    "artifact": "pysat-tutorial/11 - pysat Instantiation and Parameters.ipynb",
+    "location": "cell 4",
+    "category": "runtime",
+    "package": null,
+    "summary": "Notebook execution failed.",
+    "evidence": ""
+  },
+  {
+    "severity": "medium",
+    "artifact": "pysat-tutorial/11 - pysat Instantiation and Parameters.ipynb",
+    "location": "cell 4 output",
+    "category": "path",
+    "package": null,
+    "summary": "Artifact hard-codes environment-specific path `/home/jovyan/scratch_space/.pysat`.",
+    "evidence": "cell 4 output still points at a Binder/JupyterHub path, which is likely to drift outside the original 2024 teaching environment."
+  },
+  {
+    "severity": "medium",
+    "artifact": "pysat-tutorial/11 - pysat Instantiation and Parameters.ipynb",
+    "location": "cell 4 output",
+    "category": "path",
+    "package": null,
+    "summary": "Artifact hard-codes environment-specific path `/home/jovyan/scratch_space/.pysat`.",
+    "evidence": "cell 4 output still points at a Binder/JupyterHub path, which is likely to drift outside the original 2024 teaching environment."
+  },
+  {
+    "severity": "medium",
+    "artifact": "pysat-tutorial/11 - pysat Instantiation and Parameters.ipynb",
+    "location": "cell 8 output",
+    "category": "path",
+    "package": null,
+    "summary": "Artifact hard-codes environment-specific path `/home/jovyan/scratch_space/.pysat/pysat/testing/`.",
+    "evidence": "cell 8 output still points at a Binder/JupyterHub path, which is likely to drift outside the original 2024 teaching environment."
+  },
+  {
+    "severity": "medium",
+    "artifact": "pysat-tutorial/12 - pyast Data Access and Assignment.ipynb",
+    "location": "cell 4",
+    "category": "path",
+    "package": null,
+    "summary": "Artifact hard-codes environment-specific path `/home/jovyan/scratch_space/.pysat/`.",
+    "evidence": "cell 4 still points at a Binder/JupyterHub path, which is likely to drift outside the original 2024 teaching environment."
+  },
+  {
+    "severity": "high-risk",
+    "artifact": "pysat-tutorial/12 - pyast Data Access and Assignment.ipynb",
+    "location": "cell 4",
+    "category": "runtime",
+    "package": null,
+    "summary": "Notebook execution failed.",
+    "evidence": ""
+  },
+  {
+    "severity": "medium",
+    "artifact": "pysat-tutorial/12 - pyast Data Access and Assignment.ipynb",
+    "location": "cell 4 output",
+    "category": "path",
+    "package": null,
+    "summary": "Artifact hard-codes environment-specific path `/home/jovyan/scratch_space/.pysat`.",
+    "evidence": "cell 4 output still points at a Binder/JupyterHub path, which is likely to drift outside the original 2024 teaching environment."
+  },
+  {
+    "severity": "medium",
+    "artifact": "pysat-tutorial/12 - pyast Data Access and Assignment.ipynb",
+    "location": "cell 4 output",
+    "category": "path",
+    "package": null,
+    "summary": "Artifact hard-codes environment-specific path `/home/jovyan/scratch_space/.pysat`.",
+    "evidence": "cell 4 output still points at a Binder/JupyterHub path, which is likely to drift outside the original 2024 teaching environment."
+  },
+  {
+    "severity": "medium",
+    "artifact": "pyspedas-tutorial/Finding_Magnetic_Nulls_MMS_20230324.ipynb",
+    "location": "cell 3",
+    "category": "path",
+    "package": null,
+    "summary": "Artifact hard-codes environment-specific path `/home/jovyan/scratch_space/pyspedas_data`.",
+    "evidence": "cell 3 still points at a Binder/JupyterHub path, which is likely to drift outside the original 2024 teaching environment."
+  },
+  {
+    "severity": "informational",
+    "artifact": "pyspedas-tutorial/Finding_Magnetic_Nulls_MMS_20230324.ipynb",
+    "location": "cell 4 output",
+    "category": "stale-output",
+    "package": null,
+    "summary": "Artifact output still references an old site-packages path.",
+    "evidence": "cell 4 output includes `site-packages/urllib3/__init__.py:35:`, which ties the notebook output to the historical 2024 environment."
+  },
+  {
+    "severity": "high-risk",
+    "artifact": "pyspedas-tutorial/Finding_Magnetic_Nulls_MMS_20230324.ipynb",
+    "location": "cell 6",
+    "category": "runtime",
+    "package": null,
+    "summary": "Notebook execution failed.",
+    "evidence": ""
+  },
+  {
+    "severity": "medium",
+    "artifact": "pyspedas-tutorial/Generate_2D_slices_of_MMS_FPI_data.ipynb",
+    "location": "cell 4",
+    "category": "path",
+    "package": null,
+    "summary": "Artifact hard-codes environment-specific path `/home/jovyan/scratch_space/pyspedas_data`.",
+    "evidence": "cell 4 still points at a Binder/JupyterHub path, which is likely to drift outside the original 2024 teaching environment."
+  },
+  {
+    "severity": "high-risk",
+    "artifact": "pyspedas-tutorial/Generate_2D_slices_of_MMS_FPI_data.ipynb",
+    "location": "cell 9",
+    "category": "runtime",
+    "package": null,
+    "summary": "Notebook execution failed.",
+    "evidence": ""
+  },
+  {
+    "severity": "external blocker",
+    "artifact": "pyspedas-tutorial/Introduction_to_PySPEDAS.ipynb",
+    "location": "cell 11",
+    "category": "runtime",
+    "package": null,
+    "summary": "Notebook execution failed.",
+    "evidence": ""
+  },
+  {
+    "severity": "medium",
+    "artifact": "pyspedas-tutorial/Introduction_to_PySPEDAS.ipynb",
+    "location": "cell 11 output",
+    "category": "path",
+    "package": null,
+    "summary": "Artifact hard-codes environment-specific path `/home/jovyan/scratch_space/pyspedas_data/themis/tha/l2/fgm/2023/tha_l2_fgm_20230324_v01.cdf`.",
+    "evidence": "cell 11 output still points at a Binder/JupyterHub path, which is likely to drift outside the original 2024 teaching environment."
+  },
+  {
+    "severity": "medium",
+    "artifact": "pyspedas-tutorial/Introduction_to_PySPEDAS.ipynb",
+    "location": "cell 11 output",
+    "category": "path",
+    "package": null,
+    "summary": "Artifact hard-codes environment-specific path `/home/jovyan`.",
+    "evidence": "cell 11 output still points at a Binder/JupyterHub path, which is likely to drift outside the original 2024 teaching environment."
+  },
+  {
+    "severity": "informational",
+    "artifact": "pyspedas-tutorial/Introduction_to_PySPEDAS.ipynb",
+    "location": "cell 11 output",
+    "category": "stale-output",
+    "package": null,
+    "summary": "Artifact output still references an old site-packages path.",
+    "evidence": "cell 11 output includes `site-packages/pyspedas/themis/spacecraft/fields/fgm.py:89\u001b[0m,`, which ties the notebook output to the historical 2024 environment."
+  },
+  {
+    "severity": "informational",
+    "artifact": "pyspedas-tutorial/Introduction_to_PySPEDAS.ipynb",
+    "location": "cell 11 output",
+    "category": "stale-output",
+    "package": null,
+    "summary": "Artifact output still references an old site-packages path.",
+    "evidence": "cell 11 output includes `site-packages/pyspedas/themis/load.py:197\u001b[0m,`, which ties the notebook output to the historical 2024 environment."
+  },
+  {
+    "severity": "informational",
+    "artifact": "pyspedas-tutorial/Introduction_to_PySPEDAS.ipynb",
+    "location": "cell 11 output",
+    "category": "stale-output",
+    "package": null,
+    "summary": "Artifact output still references an old site-packages path.",
+    "evidence": "cell 11 output includes `site-packages/pyspedas/utilities/download.py:489\u001b[0m,`, which ties the notebook output to the historical 2024 environment."
+  },
+  {
+    "severity": "informational",
+    "artifact": "pyspedas-tutorial/Introduction_to_PySPEDAS.ipynb",
+    "location": "cell 11 output",
+    "category": "stale-output",
+    "package": null,
+    "summary": "Artifact output still references an old site-packages path.",
+    "evidence": "cell 11 output includes `site-packages/pyspedas/utilities/download.py:505\u001b[0m,`, which ties the notebook output to the historical 2024 environment."
+  },
+  {
+    "severity": "informational",
+    "artifact": "pyspedas-tutorial/Introduction_to_PySPEDAS.ipynb",
+    "location": "cell 11 output",
+    "category": "stale-output",
+    "package": null,
+    "summary": "Artifact output still references an old site-packages path.",
+    "evidence": "cell 11 output includes `site-packages/pyspedas/utilities/download.py:231\u001b[0m,`, which ties the notebook output to the historical 2024 environment."
+  },
+  {
+    "severity": "medium",
+    "artifact": "pyspedas-tutorial/Introduction_to_PySPEDAS.ipynb",
+    "location": "cell 11 output",
+    "category": "endpoint",
+    "package": null,
+    "summary": "Artifact references plain HTTP endpoint `http://themis.ssl.berkeley.edu/data/themis/tha/l2/fgm/2023/`.",
+    "evidence": "cell 11 output contains `http://themis.ssl.berkeley.edu/data/themis/tha/l2/fgm/2023/`; verify the provider still supports this endpoint in 2026 and prefer HTTPS where available."
+  },
+  {
+    "severity": "medium",
+    "artifact": "pyspedas-tutorial/Introduction_to_PySPEDAS.ipynb",
+    "location": "cell 11 output",
+    "category": "endpoint",
+    "package": null,
+    "summary": "Artifact references plain HTTP endpoint `http://themis.ssl.berkeley.edu/data/themis/tha/l2/fgm/2023/tha_l2_fgm_20230324_v01.cdf`.",
+    "evidence": "cell 11 output contains `http://themis.ssl.berkeley.edu/data/themis/tha/l2/fgm/2023/tha_l2_fgm_20230324_v01.cdf`; verify the provider still supports this endpoint in 2026 and prefer HTTPS where available."
+  },
+  {
+    "severity": "medium",
+    "artifact": "pyspedas-tutorial/Introduction_to_PySPEDAS.ipynb",
+    "location": "cell 5",
+    "category": "path",
+    "package": null,
+    "summary": "Artifact hard-codes environment-specific path `/home/jovyan/scratch_space/pyspedas_data`.",
+    "evidence": "cell 5 still points at a Binder/JupyterHub path, which is likely to drift outside the original 2024 teaching environment."
+  },
+  {
+    "severity": "informational",
+    "artifact": "pyspedas-tutorial/Introduction_to_PySPEDAS.ipynb",
+    "location": "cell 7 output",
+    "category": "stale-output",
+    "package": null,
+    "summary": "Artifact output still references an old site-packages path.",
+    "evidence": "cell 7 output includes `site-packages/urllib3/__init__.py:35:`, which ties the notebook output to the historical 2024 environment."
+  },
+  {
+    "severity": "medium",
+    "artifact": "pyspedas-tutorial/MMS, THEMIS, Arase orbits 2023-03-24.ipynb",
+    "location": "cell 5",
+    "category": "path",
+    "package": null,
+    "summary": "Artifact hard-codes environment-specific path `/home/jovyan/scratch_space/pyspedas_data`.",
+    "evidence": "cell 5 still points at a Binder/JupyterHub path, which is likely to drift outside the original 2024 teaching environment."
+  },
+  {
+    "severity": "external blocker",
+    "artifact": "pyspedas-tutorial/MMS, THEMIS, Arase orbits 2023-03-24.ipynb",
+    "location": "cell 6",
+    "category": "runtime",
+    "package": null,
+    "summary": "Notebook execution failed.",
+    "evidence": ""
+  },
+  {
+    "severity": "medium",
+    "artifact": "pyspedas-tutorial/MMS_summary_plot_20230324.ipynb",
+    "location": "cell 2",
+    "category": "path",
+    "package": null,
+    "summary": "Artifact hard-codes environment-specific path `/home/jovyan/scratch_space/pyspedas_data`.",
+    "evidence": "cell 2 still points at a Binder/JupyterHub path, which is likely to drift outside the original 2024 teaching environment."
+  },
+  {
+    "severity": "informational",
+    "artifact": "pyspedas-tutorial/MMS_summary_plot_20230324.ipynb",
+    "location": "cell 3 output",
+    "category": "stale-output",
+    "package": null,
+    "summary": "Artifact output still references an old site-packages path.",
+    "evidence": "cell 3 output includes `site-packages/urllib3/__init__.py:35:`, which ties the notebook output to the historical 2024 environment."
+  },
+  {
+    "severity": "informational",
+    "artifact": "pyspedas-tutorial/MMS_summary_plot_20230324.ipynb",
+    "location": "cell 3 output",
+    "category": "stale-output",
+    "package": null,
+    "summary": "Artifact output still references an old site-packages path.",
+    "evidence": "cell 3 output includes `site-packages/pytplot/MPLPlotter/specplot.py:285:`, which ties the notebook output to the historical 2024 environment."
+  },
+  {
+    "severity": "informational",
+    "artifact": "pyspedas-tutorial/MMS_summary_plot_20230324.ipynb",
+    "location": "cell 3 output",
+    "category": "stale-output",
+    "package": null,
+    "summary": "Artifact output still references an old site-packages path.",
+    "evidence": "cell 3 output includes `site-packages/pytplot/MPLPlotter/specplot.py:285:`, which ties the notebook output to the historical 2024 environment."
+  },
+  {
+    "severity": "medium",
+    "artifact": "pyspedas-tutorial/MMS_summary_plot_20230324.ipynb",
+    "location": "cell 3 output",
+    "category": "endpoint",
+    "package": null,
+    "summary": "Artifact references plain HTTP endpoint `http://themis.ssl.berkeley.edu/data/themis/thg/l1/mag/idx/2023/`.",
+    "evidence": "cell 3 output contains `http://themis.ssl.berkeley.edu/data/themis/thg/l1/mag/idx/2023/`; verify the provider still supports this endpoint in 2026 and prefer HTTPS where available."
+  },
+  {
+    "severity": "medium",
+    "artifact": "pyspedas-tutorial/Magnetic_Field_Modeling.ipynb",
+    "location": "cell 15 output",
+    "category": "endpoint",
+    "package": null,
+    "summary": "Artifact references plain HTTP endpoint `http://wdc.kugi.kyoto-u.ac.jp/`.",
+    "evidence": "cell 15 output contains `http://wdc.kugi.kyoto-u.ac.jp/`; verify the provider still supports this endpoint in 2026 and prefer HTTPS where available."
+  },
+  {
+    "severity": "medium",
+    "artifact": "pyspedas-tutorial/Magnetic_Field_Modeling.ipynb",
+    "location": "cell 2",
+    "category": "path",
+    "package": null,
+    "summary": "Artifact hard-codes environment-specific path `/home/jovyan/scratch_space/pyspedas_data`.",
+    "evidence": "cell 2 still points at a Binder/JupyterHub path, which is likely to drift outside the original 2024 teaching environment."
+  },
+  {
+    "severity": "external blocker",
+    "artifact": "pyspedas-tutorial/Magnetic_Field_Modeling.ipynb",
+    "location": "cell 5",
+    "category": "runtime",
+    "package": null,
+    "summary": "Notebook execution failed.",
+    "evidence": ""
+  },
+  {
+    "severity": "medium",
+    "artifact": "pyspedas-tutorial/PyTplot_range_options.ipynb",
+    "location": "cell 2",
+    "category": "path",
+    "package": null,
+    "summary": "Artifact hard-codes environment-specific path `/home/jovyan/scratch_space/pyspedas_data`.",
+    "evidence": "cell 2 still points at a Binder/JupyterHub path, which is likely to drift outside the original 2024 teaching environment."
+  },
+  {
+    "severity": "high-risk",
+    "artifact": "pyspedas-tutorial/PyTplot_range_options.ipynb",
+    "location": "cell 4",
+    "category": "runtime",
+    "package": null,
+    "summary": "Notebook execution failed.",
+    "evidence": ""
+  },
+  {
+    "severity": "medium",
+    "artifact": "pyspedas-tutorial/PyTplot_variable_options.ipynb",
+    "location": "cell 19 output",
+    "category": "endpoint",
+    "package": null,
+    "summary": "Artifact references plain HTTP endpoint `http://themis.ssl.berkeley.edu/data/themis/tha/l2/fgm/2023/`.",
+    "evidence": "cell 19 output contains `http://themis.ssl.berkeley.edu/data/themis/tha/l2/fgm/2023/`; verify the provider still supports this endpoint in 2026 and prefer HTTPS where available."
+  },
+  {
+    "severity": "medium",
+    "artifact": "pyspedas-tutorial/PyTplot_variable_options.ipynb",
+    "location": "cell 2",
+    "category": "path",
+    "package": null,
+    "summary": "Artifact hard-codes environment-specific path `/home/jovyan/scratch_space/pyspedas_data`.",
+    "evidence": "cell 2 still points at a Binder/JupyterHub path, which is likely to drift outside the original 2024 teaching environment."
+  },
+  {
+    "severity": "external blocker",
+    "artifact": "pyspedas-tutorial/PyTplot_variable_options.ipynb",
+    "location": "cell 4",
+    "category": "runtime",
+    "package": null,
+    "summary": "Notebook execution failed.",
+    "evidence": ""
+  },
+  {
+    "severity": "high-risk",
+    "artifact": "spacepy-tutorial/SpacePy - Cusp energetic particles.md",
+    "location": "code fence 3 (line 94)",
+    "category": "runtime",
+    "package": null,
+    "summary": "Markdown snippet execution failed.",
+    "evidence": "OSError: [Errno 45] Operation not supported: '/home/jovyan'"
+  },
+  {
+    "severity": "medium",
+    "artifact": "spacepy-tutorial/SpacePy - Cusp energetic particles.md",
+    "location": "markdown body",
+    "category": "path",
+    "package": null,
+    "summary": "Artifact hard-codes environment-specific path `/home/jovyan/scratch_space/spacepy_tutorial`.",
+    "evidence": "markdown body still points at a Binder/JupyterHub path, which is likely to drift outside the original 2024 teaching environment."
+  },
+  {
+    "severity": "high-risk",
+    "artifact": "spacepy-tutorial/SpacePy - Cutoff Rigidities.md",
+    "location": "code fence 3 (line 62)",
+    "category": "runtime",
+    "package": null,
+    "summary": "Markdown snippet execution failed.",
+    "evidence": "OSError: [Errno 45] Operation not supported: '/home/jovyan'"
+  },
+  {
+    "severity": "medium",
+    "artifact": "spacepy-tutorial/SpacePy - Cutoff Rigidities.md",
+    "location": "markdown body",
+    "category": "path",
+    "package": null,
+    "summary": "Artifact hard-codes environment-specific path `/home/jovyan/scratch_space/spacepy_tutorial`.",
+    "evidence": "markdown body still points at a Binder/JupyterHub path, which is likely to drift outside the original 2024 teaching environment."
+  },
+  {
+    "severity": "high-risk",
+    "artifact": "spacepy-tutorial/SpacePy - MMS Ephemeris.md",
+    "location": "code fence 2 (line 47)",
+    "category": "runtime",
+    "package": null,
+    "summary": "Markdown snippet execution failed.",
+    "evidence": "OSError: [Errno 45] Operation not supported: '/home/jovyan'"
+  },
+  {
+    "severity": "medium",
+    "artifact": "spacepy-tutorial/SpacePy - MMS Ephemeris.md",
+    "location": "markdown body",
+    "category": "path",
+    "package": null,
+    "summary": "Artifact hard-codes environment-specific path `/home/jovyan/scratch_space/spacepy_tutorial`.",
+    "evidence": "markdown body still points at a Binder/JupyterHub path, which is likely to drift outside the original 2024 teaching environment."
+  },
+  {
+    "severity": "high-risk",
+    "artifact": "spacepy-tutorial/SpacePy - SWMF Dynamics.md",
+    "location": "code fence 3 (line 82)",
+    "category": "runtime",
+    "package": null,
+    "summary": "Markdown snippet execution failed.",
+    "evidence": "SyntaxError: invalid syntax"
+  },
+  {
+    "severity": "medium",
+    "artifact": "spacepy-tutorial/SpacePy - SWMF Dynamics.md",
+    "location": "markdown body",
+    "category": "path",
+    "package": null,
+    "summary": "Artifact hard-codes environment-specific path `/home/jovyan/scratch_space/spacepy_tutorial/`.",
+    "evidence": "markdown body still points at a Binder/JupyterHub path, which is likely to drift outside the original 2024 teaching environment."
+  },
+  {
+    "severity": "medium",
+    "artifact": "spacepy-tutorial/SpacePy - SWMF Dynamics.md",
+    "location": "markdown body",
+    "category": "endpoint",
+    "package": null,
+    "summary": "Artifact references plain HTTP endpoint `http://herot.engin.umich.edu/~gtoth/SWMF/doc/SWMF.pdf`.",
+    "evidence": "markdown body contains `http://herot.engin.umich.edu/~gtoth/SWMF/doc/SWMF.pdf`; verify the provider still supports this endpoint in 2026 and prefer HTTPS where available."
+  },
+  {
+    "severity": "medium",
+    "artifact": "sunpy-tutorial/sunpy-pyspedas-showcase/sunpy-pyspedas-demo.ipynb",
+    "location": "cell 3",
+    "category": "path",
+    "package": null,
+    "summary": "Artifact hard-codes environment-specific path `/home/jovyan/scratch_space/sunpy-tutorial/sunpy-pyspedas/`.",
+    "evidence": "cell 3 still points at a Binder/JupyterHub path, which is likely to drift outside the original 2024 teaching environment."
+  },
+  {
+    "severity": "blocking",
+    "artifact": "sunpy-tutorial/sunpy-pyspedas-showcase/sunpy-pyspedas-demo.ipynb",
+    "location": "cell 58",
+    "category": "import-drift",
+    "package": "stixpy",
+    "summary": "Import statement `from stixpy.net.client import STIXClient` fails against the current audit environment.",
+    "evidence": "ModuleNotFoundError: No module named 'stixpy' Current source candidates: stixpy/net/client.py"
+  },
+  {
+    "severity": "blocking",
+    "artifact": "sunpy-tutorial/sunpy-pyspedas-showcase/sunpy-pyspedas-demo.ipynb",
+    "location": "cell 58",
+    "category": "runtime",
+    "package": null,
+    "summary": "Notebook execution failed.",
+    "evidence": ""
+  },
+  {
+    "severity": "blocking",
+    "artifact": "sunpy-tutorial/sunpy-pyspedas-showcase/sunpy-pyspedas-demo.ipynb",
+    "location": "cell 63",
+    "category": "import-drift",
+    "package": "stixpy",
+    "summary": "Import statement `from stixpy.timeseries import quicklook` fails against the current audit environment.",
+    "evidence": "ModuleNotFoundError: No module named 'stixpy'"
+  },
+  {
+    "severity": "blocking",
+    "artifact": "sunpy-tutorial/sunpy-pyspedas-showcase/sunpy-pyspedas-demo.ipynb",
+    "location": "cell 81",
+    "category": "import-drift",
+    "package": "sunpy_soar",
+    "summary": "Import statement `import sunpy_soar` fails against the current audit environment.",
+    "evidence": "ModuleNotFoundError: No module named 'sunpy_soar'"
+  },
+  {
+    "severity": "high-risk",
+    "artifact": "sunpy-tutorial/sunpy-tutorial/part-1-sunpy-instructor-version.ipynb",
+    "location": "cell 19",
+    "category": "runtime",
+    "package": null,
+    "summary": "Notebook execution failed.",
+    "evidence": ""
+  },
+  {
+    "severity": "medium",
+    "artifact": "sunpy-tutorial/sunpy-tutorial/part-1-sunpy-instructor-version.ipynb",
+    "location": "cell 2",
+    "category": "path",
+    "package": null,
+    "summary": "Artifact hard-codes environment-specific path `/home/jovyan/scratch_space/sunpy-tutorial/sunpy/`.",
+    "evidence": "cell 2 still points at a Binder/JupyterHub path, which is likely to drift outside the original 2024 teaching environment."
+  },
+  {
+    "severity": "medium",
+    "artifact": "sunpy-tutorial/sunpy-tutorial/part-1-sunpy-instructor-version.ipynb",
+    "location": "cell 7",
+    "category": "endpoint",
+    "package": null,
+    "summary": "Artifact references plain HTTP endpoint `http://docs.astropy.org/en/stable/units/index.html`.",
+    "evidence": "cell 7 contains `http://docs.astropy.org/en/stable/units/index.html`; verify the provider still supports this endpoint in 2026 and prefer HTTPS where available."
+  },
+  {
+    "severity": "high-risk",
+    "artifact": "sunpy-tutorial/sunpy-tutorial/part-1-sunpy.ipynb",
+    "location": "cell 19",
+    "category": "runtime",
+    "package": null,
+    "summary": "Notebook execution failed.",
+    "evidence": ""
+  },
+  {
+    "severity": "medium",
+    "artifact": "sunpy-tutorial/sunpy-tutorial/part-1-sunpy.ipynb",
+    "location": "cell 2",
+    "category": "path",
+    "package": null,
+    "summary": "Artifact hard-codes environment-specific path `/home/jovyan/scratch_space/sunpy-tutorial/sunpy/`.",
+    "evidence": "cell 2 still points at a Binder/JupyterHub path, which is likely to drift outside the original 2024 teaching environment."
+  },
+  {
+    "severity": "medium",
+    "artifact": "sunpy-tutorial/sunpy-tutorial/part-1-sunpy.ipynb",
+    "location": "cell 7",
+    "category": "endpoint",
+    "package": null,
+    "summary": "Artifact references plain HTTP endpoint `http://docs.astropy.org/en/stable/units/index.html`.",
+    "evidence": "cell 7 contains `http://docs.astropy.org/en/stable/units/index.html`; verify the provider still supports this endpoint in 2026 and prefer HTTPS where available."
+  }
+]

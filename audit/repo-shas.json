@@ -1,0 +1,146 @@
+[
+  {
+    "name": "sunpy",
+    "branch": "main",
+    "sha": "e06e0743c0deb9c69405d50c66617e472795682b",
+    "checkout_path": "/var/folders/4f/t664wvxn4nd8864qfqwknh7r008q5h/T/summer-school-audit-n541fked/repos/sunpy",
+    "install_editable": true,
+    "runtime_import": "sunpy",
+    "source_path": "/Users/shpo9723/git/sunpy"
+  },
+  {
+    "name": "spacepy",
+    "branch": "main",
+    "sha": "cb983af96e06265dc35463e0d725a11eaf0682a6",
+    "checkout_path": "/var/folders/4f/t664wvxn4nd8864qfqwknh7r008q5h/T/summer-school-audit-n541fked/repos/spacepy",
+    "install_editable": false,
+    "runtime_import": "spacepy",
+    "source_path": "/Users/shpo9723/git/spacepy"
+  },
+  {
+    "name": "pysat",
+    "branch": "main",
+    "sha": "3f0e5a43ad36f1eecfed02a3d1e3a740fd1a5f37",
+    "checkout_path": "/var/folders/4f/t664wvxn4nd8864qfqwknh7r008q5h/T/summer-school-audit-n541fked/repos/pysat",
+    "install_editable": true,
+    "runtime_import": "pysat",
+    "source_path": "/Users/shpo9723/git/pysat"
+  },
+  {
+    "name": "PlasmaPy",
+    "branch": "main",
+    "sha": "3a7835201d57548cefc6b789943a85498cf52d1d",
+    "checkout_path": "/var/folders/4f/t664wvxn4nd8864qfqwknh7r008q5h/T/summer-school-audit-n541fked/repos/PlasmaPy",
+    "install_editable": true,
+    "runtime_import": "plasmapy",
+    "source_path": "/Users/shpo9723/git/PlasmaPy"
+  },
+  {
+    "name": "pyspedas",
+    "branch": "master",
+    "sha": "e4a634109a81134e5f02eb0410a7228638ade111",
+    "checkout_path": "/var/folders/4f/t664wvxn4nd8864qfqwknh7r008q5h/T/summer-school-audit-n541fked/repos/pyspedas",
+    "install_editable": true,
+    "runtime_import": "pyspedas",
+    "source_path": "/Users/shpo9723/git/pyspedas"
+  },
+  {
+    "name": "client-python",
+    "branch": "master",
+    "sha": "ca2d3cdba3292f9a24b22a334ca049d7a0021310",
+    "checkout_path": "/var/folders/4f/t664wvxn4nd8864qfqwknh7r008q5h/T/summer-school-audit-n541fked/repos/client-python",
+    "install_editable": true,
+    "runtime_import": "hapiclient",
+    "source_path": "/Users/shpo9723/git/client-python"
+  },
+  {
+    "name": "PyTplot",
+    "branch": "master",
+    "sha": "f7fb3042898a52f8289b9d8c60ffae38949cad04",
+    "checkout_path": "/var/folders/4f/t664wvxn4nd8864qfqwknh7r008q5h/T/summer-school-audit-n541fked/repos/PyTplot",
+    "install_editable": true,
+    "runtime_import": "pytplot",
+    "source_path": "/Users/shpo9723/git/pyhc-chat-cli/pyhc_packages/PyTplot"
+  },
+  {
+    "name": "apexpy",
+    "branch": "main",
+    "sha": "ebc4761dfdb9b1398fa13f70abca0b435244defd",
+    "checkout_path": "/var/folders/4f/t664wvxn4nd8864qfqwknh7r008q5h/T/summer-school-audit-n541fked/repos/apexpy",
+    "install_editable": false,
+    "runtime_import": "apexpy",
+    "source_path": "/Users/shpo9723/git/pyhc-chat-cli/pyhc_packages/apexpy"
+  },
+  {
+    "name": "solarmach",
+    "branch": "main",
+    "sha": "1c6572e7725740c5e176f22dd42b34e86dd9a614",
+    "checkout_path": "/var/folders/4f/t664wvxn4nd8864qfqwknh7r008q5h/T/summer-school-audit-n541fked/repos/solarmach",
+    "install_editable": true,
+    "runtime_import": "solarmach",
+    "source_path": "/Users/shpo9723/git/pyhc-chat-cli/pyhc_packages/solarmach"
+  },
+  {
+    "name": "pysatNASA",
+    "branch": "main",
+    "sha": "a75df9ac6e438826afdb68c60a7ed21fe4336262",
+    "checkout_path": "/var/folders/4f/t664wvxn4nd8864qfqwknh7r008q5h/T/summer-school-audit-n541fked/repos/pysatNASA",
+    "install_editable": true,
+    "runtime_import": "pysatNASA",
+    "source_path": "https://github.com/pysat/pysatNASA.git"
+  },
+  {
+    "name": "pysatMissions",
+    "branch": "main",
+    "sha": "7eae852d62381c1ad30c98613301b51e0eadfa29",
+    "checkout_path": "/var/folders/4f/t664wvxn4nd8864qfqwknh7r008q5h/T/summer-school-audit-n541fked/repos/pysatMissions",
+    "install_editable": true,
+    "runtime_import": "pysatMissions",
+    "source_path": "https://github.com/pysat/pysatMissions.git"
+  },
+  {
+    "name": "pysatSeasons",
+    "branch": "main",
+    "sha": "82a76e05bbeb460fb3023e21c68634bc456cc5da",
+    "checkout_path": "/var/folders/4f/t664wvxn4nd8864qfqwknh7r008q5h/T/summer-school-audit-n541fked/repos/pysatSeasons",
+    "install_editable": true,
+    "runtime_import": "pysatSeasons",
+    "source_path": "https://github.com/pysat/pysatSeasons.git"
+  },
+  {
+    "name": "pysatSpaceWeather",
+    "branch": "main",
+    "sha": "e36d39d60ed79481fccdceef4c9a4a232ddf91c8",
+    "checkout_path": "/var/folders/4f/t664wvxn4nd8864qfqwknh7r008q5h/T/summer-school-audit-n541fked/repos/pysatSpaceWeather",
+    "install_editable": true,
+    "runtime_import": "pysatSpaceWeather",
+    "source_path": "https://github.com/pysat/pysatSpaceWeather.git"
+  },
+  {
+    "name": "pysatMadrigal",
+    "branch": "main",
+    "sha": "e07ca366d341a1d9ea3c1e99594a4a9186b9895b",
+    "checkout_path": "/var/folders/4f/t664wvxn4nd8864qfqwknh7r008q5h/T/summer-school-audit-n541fked/repos/pysatMadrigal",
+    "install_editable": true,
+    "runtime_import": "pysatMadrigal",
+    "source_path": "https://github.com/pysat/pysatMadrigal.git"
+  },
+  {
+    "name": "stixpy",
+    "branch": "main",
+    "sha": "4f4e0c7d7d14ad71ebcf1a2b3882327ad926cc6d",
+    "checkout_path": "/var/folders/4f/t664wvxn4nd8864qfqwknh7r008q5h/T/summer-school-audit-n541fked/repos/stixpy",
+    "install_editable": true,
+    "runtime_import": "stixpy",
+    "source_path": "https://github.com/TCDSolar/stixpy.git"
+  },
+  {
+    "name": "hapiplot",
+    "branch": "main",
+    "sha": "47eaded3d812ed2976ea5081485a34d1322610b3",
+    "checkout_path": "/var/folders/4f/t664wvxn4nd8864qfqwknh7r008q5h/T/summer-school-audit-n541fked/repos/hapiplot",
+    "install_editable": true,
+    "runtime_import": "hapiplot",
+    "source_path": "https://github.com/hapi-server/plot-python.git"
+  }
+]
